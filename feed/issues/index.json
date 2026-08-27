@@ -1,0 +1,30 @@
+{
+  "title": "kayzn.io AI Agent Evaluation Newsfeed",
+  "generated_at": "2026-08-27T18:51:06+00:00",
+  "issue_count": 2,
+  "entry_count": 22,
+  "issues": [
+    {
+      "date": "2026-08-27",
+      "range": "Aug 21-27, 2026",
+      "count": 14,
+      "headlines": [
+        "Telling agents not to cheat mostly does not work",
+        "System prompt guardrails alone barely stop prompt injection",
+        "Old scores quietly bias your LLM judges"
+      ],
+      "path": "2026-08-27.json"
+    },
+    {
+      "date": "2026-08-26",
+      "range": "Aug 13-26, 2026",
+      "count": 8,
+      "headlines": [
+        "One success does not mean your agent is reliable",
+        "Your LLM judge may flip rankings by language",
+        "Netflix treats its LLM judge as a living system"
+      ],
+      "path": "2026-08-26.json"
+    }
+  ]
+}

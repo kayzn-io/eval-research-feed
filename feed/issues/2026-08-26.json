@@ -1,0 +1,167 @@
+{
+  "date": "2026-08-26",
+  "range": "Aug 13-26, 2026",
+  "count": 8,
+  "entries": [
+    {
+      "id": "arxiv:2608.19741",
+      "headline": "One success does not mean your agent is reliable",
+      "paragraphs": [
+        "An agent that finishes a workflow once, cleanly, with valid tool calls, can still be wrong most of the time you run it again. Single-run success rates hide that, and clean termination hides it further, because the backend state can be broken even when the tool calls look fine.",
+        "A new benchmark grades 507 stateful business workflows against the actual backend state, not the final answer, running each task 20 times across 12 models. The best model succeeds at least once on 91% of tasks but passes all 20 attempts on only 25%, and tool-use failures make up 77.5% of failed runs even when calls appear valid.",
+        "That gap between \"worked once\" and \"works every time\" is a property of the metric, not the agent. Before setting a pass rate as a shipping bar, ask whether it was measured once or twenty times, and against the answer or against the state it actually left behind."
+      ],
+      "paper_title": "One Success Isn't Reliability: Thinkingbox, a Sandbox and Benchmark for Agents in Stateful Business Workflows",
+      "paper_url": "https://arxiv.org/abs/2608.19741",
+      "paper_published": "2026-08-20",
+      "issue_date": "2026-08-26",
+      "issue_range": "Aug 13-26, 2026",
+      "themes": [
+        "agent-evaluation",
+        "regression-gating",
+        "tool-use",
+        "reproducibility"
+      ]
+    },
+    {
+      "id": "arxiv:2608.22432",
+      "headline": "Your LLM judge may flip rankings by language",
+      "paragraphs": [
+        "If you picked a judge model by testing it in English and assumed that holds everywhere, it might not. Which backbone scores best often depends on the prompt language, not just the model itself.",
+        "Across nearly 8,000 judge runs spanning 6 backbones, 8 languages, and 55 tasks, most backbone pairs showed statistically significant rank reversal across languages. A label-free correction that separates out this language-backbone interaction lifted agreement with human preference data from 68.7% to 76.6%, a 7.9 point gain.",
+        "So the real question is not \"which judge is best\" but \"best for which traffic.\" A judge validated once in English can be quietly wrong for every other language it scores, and this fix only helps if uniform judging, not per-language specialization, is actually the goal."
+      ],
+      "paper_title": "Rank Reversal in Multilingual LLM Judges: A Label-Free Double-Centering Calibrator",
+      "paper_url": "https://arxiv.org/abs/2608.22432",
+      "paper_published": "2026-08-23",
+      "issue_date": "2026-08-26",
+      "issue_range": "Aug 13-26, 2026",
+      "themes": [
+        "llm-judge-calibration",
+        "llm-as-a-judge",
+        "judge-robustness",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2608.18300",
+      "headline": "Netflix treats its LLM judge as a living system",
+      "paragraphs": [
+        "If your quality judge was tuned once at launch, it is probably already drifting from what your generators produce now, and nothing is watching for that.",
+        "Netflix runs its judge through four ongoing phases: human-labeled benchmarks, rubric tuning by a meta-judge trained on human rationales, live gating plus feedback, and drift monitoring that re-triggers tuning. That meta-judge matched trained raters 98.6% of the time on 300 rationale pairs, and failed outputs get retried up to three times using the judge's own reason, recovering 80%+ of achievable lift by then.",
+        "A flat pass rate at zero retries, tracked over time, cheaply tells you whether your generator regressed or your judge drifted. Do you monitor that distinction, or only the pass rate itself?"
+      ],
+      "paper_title": "The Lifecycle of LLM-as-a-Judge for Large-Scale Recommendation Explanations",
+      "paper_url": "https://arxiv.org/abs/2608.18300",
+      "paper_published": "2026-08-18",
+      "issue_date": "2026-08-26",
+      "issue_range": "Aug 13-26, 2026",
+      "themes": [
+        "llm-as-a-judge",
+        "production-monitoring",
+        "human-in-the-loop",
+        "regression-gating"
+      ]
+    },
+    {
+      "id": "arxiv:2608.20614",
+      "headline": "Passing a skill review says little about it helping",
+      "paragraphs": [
+        "Teams that vet reusable agent skills often just read the skill file: check the structure, check the docs, approve it. That review tells you almost nothing about whether the skill actually helps once an agent runs it live.",
+        "A study ran 947 paired tasks, same agent and harness, once with a skill and once without, and measured the difference. Skill use lifted results in 689 cases and hurt them in 87, with the biggest gains showing up in how the agent executed and checked its own work, not just the final answer. Structural document scans and live-run grading on the same skills correlated at only 0.14.",
+        "If your gate for shipping a skill only reads the file, you have almost no signal on what it does to a running agent. The question worth asking is whether your review measures the artifact or its paired effect on a real trajectory."
+      ],
+      "paper_title": "Evaluating Skills, Not Just Agents: Agentic Continuous Evaluation of Skills",
+      "paper_url": "https://arxiv.org/abs/2608.20614",
+      "paper_published": "2026-08-20",
+      "issue_date": "2026-08-26",
+      "issue_range": "Aug 13-26, 2026",
+      "themes": [
+        "agent-evaluation",
+        "regression-gating",
+        "agent-trajectory",
+        "observability"
+      ]
+    },
+    {
+      "id": "arxiv:2608.23663",
+      "headline": "Wrong answers can look exactly like right ones",
+      "paragraphs": [
+        "You probably assume a wrong answer looks a little off, hedged, or flagged by low confidence. An audit of a small on-device model found the opposite: it confabulated on 69% of false-premise questions while refusing 18% of harmless ones, and its self-reported confidence barely distinguished right from wrong.",
+        "Checking fifteen visible features of the output, including that confidence score, correctly-confident and wrongly-confident answers were statistically indistinguishable. A black-box wrapper that reruns the model for consistency, with no internal access, cut confident wrong answers from 75% to 3% and lifted usable accuracy from 43% to 83%.",
+        "If your monitoring leans on how an answer looks or what the model says about itself, ask whether that signal has ever been tested against ground truth. One threshold also will not fit both over-answering and over-refusing failure modes at once."
+      ],
+      "paper_title": "Confidently Wrong, Silently So: Auditing Undetectable Failures of a Deployed On-Device Language Model",
+      "paper_url": "https://arxiv.org/abs/2608.23663",
+      "paper_published": "2026-08-24",
+      "issue_date": "2026-08-26",
+      "issue_range": "Aug 13-26, 2026",
+      "themes": [
+        "production-monitoring",
+        "guardrails",
+        "observability",
+        "safety"
+      ]
+    },
+    {
+      "id": "arxiv:2608.24419",
+      "headline": "Your LLM judge may miss real changes in output",
+      "paragraphs": [
+        "If your judge model gives the same verdict across two runs, you probably assume it's working. But stability isn't the same as noticing when the actual thing changed, and most judges are good at one and weak at the other.",
+        "Testing 7 judges across 4 domains, researchers held stability high (0.945) and checked sensitivity: judges only moved their verdict 31.9% of the time when the substance actually shifted, and were notably worse at catching changes in strength (0.262) than in scope (0.383), consistently across all 7. Separately, models scoring on surface form alone reproduced up to 67.4% of MT-Bench human votes.",
+        "That means a judge can pass every stability check you run and still not be measuring what you think it's measuring. Worth asking: does your eval suite test whether the judge notices real changes, or only whether it agrees with itself?"
+      ],
+      "paper_title": "A Judge Should Know What Changed:Construct Validity for LLM-as-a-Judge Evaluation",
+      "paper_url": "https://arxiv.org/abs/2608.24419",
+      "paper_published": "2026-08-25",
+      "issue_date": "2026-08-26",
+      "issue_range": "Aug 13-26, 2026",
+      "themes": [
+        "llm-as-a-judge",
+        "judge-robustness",
+        "llm-judge-calibration",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2608.15980",
+      "headline": "Your leaderboard may be stable for the wrong reason",
+      "paragraphs": [
+        "If you validate a judge or build a reward model against \"gold\" preference labels, you assume the label is settled. It often isn't: on items where each labeling pool agreed internally, experts and crowdworkers still picked a different winning response 9.2% of the time on one benchmark and 8.5% on another, with disagreement on the underlying label itself over 23%.",
+        "Yet a six-model leaderboard built from either pool came out bit-identical. That stability is misleading: resampling the same data at the item level flips at least one model's rank in 28% of draws, and shuffles a twenty-model leaderboard almost every time. Judges also lean toward the crowd label over the expert one.",
+        "So a leaderboard surviving a pool swap tells you little, and if you read individual labels for judge checks or error analysis, ask which pool made the gold you're trusting."
+      ],
+      "paper_title": "Whose Gold? Annotator-Pool Disagreement Is Large at the Item Level, and Hidden by Small Leaderboards",
+      "paper_url": "https://arxiv.org/abs/2608.15980",
+      "paper_published": "2026-08-17",
+      "issue_date": "2026-08-26",
+      "issue_range": "Aug 13-26, 2026",
+      "themes": [
+        "human-in-the-loop-calibration",
+        "data-quality",
+        "benchmarking",
+        "llm-as-a-judge"
+      ]
+    },
+    {
+      "id": "arxiv:2608.24753",
+      "headline": "Where you spend labeling budget changes what you learn",
+      "paragraphs": [
+        "If your RAG system looks fine on marginal metrics, you may still not know whether the generator behaves correctly given what retrieval actually returns versus just getting lucky on the final answer.",
+        "A pipeline model separating retrieval success, abstention, and correctness found that spending a fixed label budget on retrieval-success annotations captured 65.6% and 58.0% of the information full joint labeling gives about policy adherence, versus 29.3% and 40.8% from task-success labels. Separately, adding 5,000 judge-labeled samples to 200 human ones barely narrowed uncertainty, because the judges' false-positive rate made each automated label nearly worthless.",
+        "Both results are setup-specific, but they turn label allocation into something computable: which annotation actually resolves the question you're asking, and whether your judge is cheap or just cheap-looking."
+      ],
+      "paper_title": "The RAT: A Unified Bayesian Model for RAG Evaluation",
+      "paper_url": "https://arxiv.org/abs/2608.24753",
+      "paper_published": "2026-08-25",
+      "issue_date": "2026-08-26",
+      "issue_range": "Aug 13-26, 2026",
+      "themes": [
+        "rag-evaluation",
+        "llm-judge-calibration",
+        "human-in-the-loop-calibration",
+        "evaluation-metrics"
+      ]
+    }
+  ]
+}
