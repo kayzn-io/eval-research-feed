@@ -1,9 +1,20 @@
 {
   "title": "kayzn.io AI Agent Evaluation Newsfeed",
-  "generated_at": "2026-08-27T18:51:06+00:00",
-  "issue_count": 2,
-  "entry_count": 22,
+  "generated_at": "2026-09-02T10:30:03+00:00",
+  "issue_count": 3,
+  "entry_count": 30,
   "issues": [
+    {
+      "date": "2026-09-02",
+      "range": "Aug 27-Sep 2, 2026",
+      "count": 8,
+      "headlines": [
+        "Your LLM judge may be failing exactly on your hardest cases",
+        "Judges checking only final answers miss silent agent failures",
+        "Your answer verifier may be silently grading itself wrong"
+      ],
+      "path": "2026-09-02.json"
+    },
     {
       "date": "2026-08-27",
       "range": "Aug 21-27, 2026",

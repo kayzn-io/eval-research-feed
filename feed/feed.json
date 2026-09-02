@@ -7,6 +7,110 @@
   "language": "en-us",
   "items": [
     {
+      "id": "arxiv:2608.26623",
+      "url": "https://arxiv.org/abs/2608.26623",
+      "title": "Your LLM judge may be failing exactly on your hardest cases",
+      "content_html": "<p>If you use an LLM to grade your agent's tool calls, you've probably noticed the grader looks solid on easy traces and gets shakier on the messy ones. It's tempting to assume a bigger judge model or a reference answer fixes that.</p><p>A benchmark of 3,808 tool-calling tasks across difficulty levels tested six judges, from 20B models to frontier scale. On the hardest queries without a reference answer, every judge converged to the same 77-82% agreement band regardless of size, and giving two frontier judges the ground truth actually made them worse, dropping 1.5 and 3.9 points.</p><p>That's not a scale problem, it's a structural one, and no reference answer reliably saves you from it. Before trusting an aggregate pass rate, worth asking how your judge behaves specifically on your hardest, most ambiguous traces, and whether adding ground truth is helping or anchoring it.</p><p><a href=\"https://arxiv.org/abs/2608.26623\">AgentJudgeBench: A Multi-Difficulty Benchmark for Evaluating LLM Judges on Agentic Tool-Calling</a></p>",
+      "date_published": "2026-09-02T00:00:00+00:00",
+      "tags": [
+        "llm-as-a-judge",
+        "judge-robustness",
+        "tool-use",
+        "benchmarking"
+      ]
+    },
+    {
+      "id": "arxiv:2609.00038",
+      "url": "https://arxiv.org/abs/2609.00038",
+      "title": "Judges checking only final answers miss silent agent failures",
+      "content_html": "<p>If your agent's final answer looks fine, you probably assume the run was fine. Plenty of faults happen mid-trajectory but never break the visible outcome, and those are the ones nobody notices in review.</p><p>A controlled test with known-faulty trajectories found an outcome-only judge caught 84% of faults that broke the visible answer but only 45% of the silent ones, while also flagging 33% of correct runs as faulty. A judge scoring each step hit 77% silent recall with zero false alarms, but cost three times as much, and a single unsupported claim tacked onto an otherwise perfect trajectory slipped past that step judge 82% of the time.</p><p>One aggregate recall number can hide this split entirely. Worth asking: does your judge setup report accuracy separately for faults that survive to the final answer versus ones that don't, or just one number that flatters itself?</p><p><a href=\"https://arxiv.org/abs/2609.00038\">trajectory-judge: What Outcome-Only LLM Judges Miss on Agent Trajectories</a></p>",
+      "date_published": "2026-09-02T00:00:00+00:00",
+      "tags": [
+        "llm-as-a-judge",
+        "agent-trajectory",
+        "judge-robustness",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2609.01354",
+      "url": "https://arxiv.org/abs/2609.01354",
+      "title": "Your answer verifier may be silently grading itself wrong",
+      "content_html": "<p>If you use an automated verifier to score correct answers during RL training or eval, you probably assume it agrees with itself. It often does not.</p><p>Testing four widely used verifiers across 307,420 verdicts on answer variants that should be treated as equivalent, self-agreement ranged from 53.8% to 95.2%, a 41.3-point spread, and two configurations of the same library disagreed on half their pairs. Most failures were whitespace and punctuation, not hard parsing, and one numeric checker accepted off-by-one wrong answers automatically once the gold value crossed 10^4, a scale-triggered bug no aggregate accuracy number would reveal.</p><p>The question is not whether your verifier's accuracy looks fine on average, but which configuration you are running, on what inputs, and whether its failures are rejections or silent false positives.</p><p><a href=\"https://arxiv.org/abs/2609.01354\">Where the Verifier Fails: A Category-Level Audit of Reward Signals in RLVR</a></p>",
+      "date_published": "2026-09-02T00:00:00+00:00",
+      "tags": [
+        "llm-judge-calibration",
+        "judge-robustness",
+        "reward-modeling",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2608.29517",
+      "url": "https://arxiv.org/abs/2608.29517",
+      "title": "LLM judges agree with humans but score wildly differently",
+      "content_html": "<p>If you picked an LLM judge because it correlates well with human raters, you may have missed the number that actually matters: how harsh or lenient it is.</p><p>An audit of 12 LLM judges from four providers scoring 2,377 essays found every judge sat in a narrow .47 to .56 correlation band with humans, yet severity varied by up to 219 points on a 1000-point scale. Swapping model versions within the same family shifted scoring severity by as much as 133 points, and one judge was quietly retired mid-study rather than drifting gradually.</p><p>Agreement scores can hide miscalibration far larger than what separates trained human raters, especially dangerous for pass or fail thresholds. If your monitoring only tracks correlation, ask whether you would even notice a severity shift after the next model update.</p><p><a href=\"https://arxiv.org/abs/2608.29517\">LLM Judges as Raters: A Pre-Registered Audit of Severity, Halo, Reliability, and Version Instability in LLM Essay Scoring on Public Corpora</a></p>",
+      "date_published": "2026-09-02T00:00:00+00:00",
+      "tags": [
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "judge-robustness",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2609.00494",
+      "url": "https://arxiv.org/abs/2609.00494",
+      "title": "Your LLM judge is probably underrating your agent's accuracy",
+      "content_html": "<p>If you trust an LLM judge to score your agent's factuality, you may be flying blind on how wrong it actually is, and not in a random way. The errors cluster around specific patterns: partial evidence, time-sensitive claims, unverifiable statements.</p><p>Tested against human labels, judge-predicted accuracy underestimated the real number by 13.3 points on one internal system and by 30.6 points on a public benchmark (55.6% versus 86.2%). Targeting human review at these known failure modes, rather than sampling uniformly or by judge confidence, made limited annotation budgets up to 40% more effective at catching the gap.</p><p>The open question for your own eval setup: do you know which categories of your agent's outputs your judge systematically misjudges, or are you assuming the errors are evenly spread?</p><p><a href=\"https://arxiv.org/abs/2609.00494\">Human-Anchored Factuality Evaluation with Strategic Annotation</a></p>",
+      "date_published": "2026-09-02T00:00:00+00:00",
+      "tags": [
+        "llm-as-a-judge",
+        "human-in-the-loop-calibration",
+        "evaluation-metrics",
+        "data-quality"
+      ]
+    },
+    {
+      "id": "arxiv:2608.31016",
+      "url": "https://arxiv.org/abs/2608.31016",
+      "title": "LLM Judges Miss What Clinical Notes Leave Out",
+      "content_html": "<p>If you use an LLM judge to catch bad AI-generated notes, it is probably very good at catching things that shouldn't be there and nearly blind to things that should be there but aren't.</p><p>On a 500-pair benchmark, eight judge designs scored 0.79 to 0.94 accuracy on added or wrong content, but only 0.50 to 0.63 on omissions, essentially chance. Restructuring the judge to check each fact's presence individually, rather than judging the note as a whole, fixed it: a single-call version caught 36.9% of omission cases versus 24.6% for the best standard judge, at a fraction of the cost.</p><p>This isn't a prompt-wording problem, it's a task-framing one. If your judge evaluates whether a note is &quot;correct&quot; rather than checking off each expected fact, ask whether it could ever tell you something important was left out.</p><p><a href=\"https://arxiv.org/abs/2608.31016\">LLM Judges Verify Presence, Not Absence: Omission Blindness in AI Clinical Notes and What Recovers It</a></p>",
+      "date_published": "2026-09-02T00:00:00+00:00",
+      "tags": [
+        "llm-as-a-judge",
+        "judge-robustness",
+        "evaluation-metrics",
+        "safety"
+      ]
+    },
+    {
+      "id": "arxiv:2609.01603",
+      "url": "https://arxiv.org/abs/2609.01603",
+      "title": "Full benchmark scores from a tenth of the tasks",
+      "content_html": "<p>Running an agent through the full SWE-bench suite every time you tweak something is slow and expensive, so most teams already sample. The usual shortcut just looks at pass or fail on a subset, throwing away everything about how the agent got there.</p><p>A new method called PTA-IRT instead scores agents using their full execution trajectories, what they explored, what they tried to edit, not just the final outcome. Calibrated on only 10% of tasks across four SWE-bench variants, it reconstructs full-benchmark scores and rankings with an average error of 0.041 and near-perfect rank agreement, beating eight prior estimation methods on every measure.</p><p>If a tenth of the tasks plus trajectory detail beats the rest of the benchmark run blind, the question for any team sampling evaluations is whether their subset is throwing away the signal that actually distinguishes agents.</p><p><a href=\"https://arxiv.org/abs/2609.01603\">Efficient SWE Agent Benchmarking via Trajectory-Aware Evaluation</a></p>",
+      "date_published": "2026-09-02T00:00:00+00:00",
+      "tags": [
+        "agent-evaluation",
+        "benchmarking",
+        "agent-trajectory",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2609.01519",
+      "url": "https://arxiv.org/abs/2609.01519",
+      "title": "Guardrail wins in agent simulations often aren't real",
+      "content_html": "<p>You benchmark a guardrail, see a big lift, and ship it. If the guarded and unguarded runs don't share the exact same schema and choice rule, that lift can be scaffolding, not policy.</p><p>A buyer-seller negotiation testbed showed guardrail gains of up to +87.4 shrink to +7.2 or even flip negative once both sides used identical offer formats. Effects also averaged +229 on single runs but fell to +37.6 across three generations per case, with run-to-run noise explaining half the variation.</p><p>Before trusting any agent eval that credits a mechanism, check whether the comparison isolates that mechanism, survives repeated runs, and states what &quot;better&quot; is measured against.</p><p><a href=\"https://arxiv.org/abs/2609.01519\">When Guardrails Look Effective: Construct Validity Failures in LLM Agent Commerce Evaluation</a></p>",
+      "date_published": "2026-09-02T00:00:00+00:00",
+      "tags": [
+        "agent-evaluation",
+        "reproducibility",
+        "simulation",
+        "agentic-workflows"
+      ]
+    },
+    {
       "id": "arxiv:2608.22103",
       "url": "https://arxiv.org/abs/2608.22103",
       "title": "Telling agents not to cheat mostly does not work",
