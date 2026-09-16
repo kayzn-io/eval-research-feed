@@ -7,6 +7,97 @@
   "language": "en-us",
   "items": [
     {
+      "id": "arxiv:2609.10969",
+      "url": "https://arxiv.org/abs/2609.10969",
+      "title": "More judges can share the same blind spot",
+      "content_html": "<p>A commit gate can look well defended because several judges agree, yet still approve a harmful action. That happens when every judge is reasoning from the same stale, incomplete, or manipulated evidence.</p><p>Across 2,880 simulated commit decisions, voting across different models using shared evidence approved 62.9% of unsafe proposals. Replacing that with one verifier using an independent source cut unsafe approvals to 22.9%.</p><p>The question is not only whether your judges disagree, but whether their evidence can fail together. Regression gates need tests for independent evidence, unfamiliar fault types, and whether a guard can still stop an action at commit time.</p><p><a href=\"https://arxiv.org/abs/2609.10969\">Engineering Reliable Commit Gates for Agentic AI: Cost-Aware Verification Portfolios under Common-Mode Data Failures</a></p>",
+      "date_published": "2026-09-16T00:00:00+00:00",
+      "tags": [
+        "agent-evaluation",
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "regression-gating"
+      ]
+    },
+    {
+      "id": "arxiv:2609.12439",
+      "url": "https://arxiv.org/abs/2609.12439",
+      "title": "Debiased judges can hide meaningful quality gaps",
+      "content_html": "<p>A judge can stop rewarding polished citations yet become less useful for choosing the better answer. The warning sign is a growing pile of ties where reviewers can still see a meaningful difference in answer quality.</p><p>In RAG and agent-workflow comparisons, stronger anti-citation instructions cut worse cited answers winning from 50.5% to 0%. But two judges then called many human-validated, moderately different answers ties; separating citation checks from quality comparison recovered 96.5-100.0% of better-answer decisions.</p><p>A lower bias rate is not enough if the judge avoids making decisions. Are tie rates tracked separately for genuinely equivalent answers and for cases where your reviewers already see a quality gap?</p><p><a href=\"https://arxiv.org/abs/2609.12439\">Debiasing as a Measurement Intervention: Calibrated Ties and Resolution Loss in LLM-as-a-Judge Evaluation</a></p>",
+      "date_published": "2026-09-16T00:00:00+00:00",
+      "tags": [
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "judge-robustness",
+        "rag-evaluation"
+      ]
+    },
+    {
+      "id": "arxiv:2609.12191",
+      "url": "https://arxiv.org/abs/2609.12191",
+      "title": "Close release calls can fool agent judges",
+      "content_html": "<p>A release gate can look reliable across a broad set of agent versions, then choose the worse candidate when the decision is close. That is exactly where regression gates are meant to protect you.</p><p>Across 25 agent configurations, a simulator-plus-judge gate followed verifiable task outcomes closely overall, but promoted the lower-reward agent in 31% of near-equal comparisons. Separately, 57.5% of conversations humans judged satisfying had still failed the task.</p><p>A judge that tracks broad rankings is not necessarily measuring successful task completion. For every close release decision, can your subjective score be checked against an outcome-grounded reward, and rechecked when the simulator, judge, or candidate mix changes?</p><p><a href=\"https://arxiv.org/abs/2609.12191\">GAUGE: When Not to Trust LLM-as-a-Judge in User-Simulated Evaluation of Task-Oriented Agents</a></p>",
+      "date_published": "2026-09-16T00:00:00+00:00",
+      "tags": [
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "agent-evaluation",
+        "regression-gating"
+      ]
+    },
+    {
+      "id": "arxiv:2609.04298",
+      "url": "https://arxiv.org/abs/2609.04298",
+      "title": "Agent scores can hide broken evaluation tasks",
+      "content_html": "<p>A broad agent score can look like a clean read on capability while quietly mixing in broken tasks, duplicated work and harness choices. That makes it hard to tell whether a release improved the agent, the runner, or merely the measurement.</p><p>Across a shared set of agent tests, the strongest model and harness pairing passed 28.0% of tasks. Auditing the hard candidates also rejected roughly one third as broken, while a compact audited set retained the broader ranking without simply selecting easy work.</p><p>The result does not say one benchmark set fits every product. It does force a sharper question: are failures in your scorecard real agent failures, and can it separate the model's contribution from the harness around it?</p><p><a href=\"https://arxiv.org/abs/2609.04298\">Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation</a></p>",
+      "date_published": "2026-09-16T00:00:00+00:00",
+      "tags": [
+        "agent-evaluation",
+        "benchmarking",
+        "agent-trajectory",
+        "data-quality"
+      ]
+    },
+    {
+      "id": "doi:10.64336/001c.170179",
+      "url": "https://doi.org/10.64336/001c.170179",
+      "title": "Contradiction checks can punish careful answers",
+      "content_html": "<p>A contradiction check can flag the answers you most want an agent to give: a careful refusal, a qualified conclusion, or an answer that cites what is known. That turns a safety or quality score into pressure to sound certain and keep responses unnaturally simple.</p><p>In a 1,850-answer human audit, one detector\u2019s precision fell from 84.6% on older short answers to 8.1% on balanced, more realistic responses. Only 24 of 298 flagged answers contained a direct contradiction; grounded citations and careful uncertainty were often flagged incorrectly.</p><p>A contradiction score is not a general hallucination score. Does your evaluation separately measure direct conflicts, missing information, justified abstention, and claims the source does not support, especially on realistic RAG answers?</p><p><a href=\"https://doi.org/10.64336/001c.170179\">A conservative benchmark of contradiction detection and its limits in LLM hallucination evaluation</a></p>",
+      "date_published": "2026-09-16T00:00:00+00:00",
+      "tags": [
+        "evaluation",
+        "benchmarking",
+        "rag-evaluation",
+        "judge-robustness"
+      ]
+    },
+    {
+      "id": "arxiv:2609.12216",
+      "url": "https://arxiv.org/abs/2609.12216",
+      "title": "Recovery can hide repeated agent work",
+      "content_html": "<p>A restarted agent can still reach the right answer while repeating a model call, spending budget twice, or triggering an external action again. If monitoring stops at final success, those differences can stay hidden until they become an incident.</p><p>In a deterministic shirt-folding simulation, all 240 injected crashes recovered the intended outcome, but only 210 kept the same execution record because 30 failures before commit replayed a planner call. Across paired runs, staged growth cut mean compute to target by 56.97 simulated GPU-hours.</p><p>This does not establish behavior in live, nondeterministic systems. It does force a distinction: does a restart restore the result, or does it preserve each call, cost, and side effect exactly once?</p><p><a href=\"https://arxiv.org/abs/2609.12216\">Guardrailed Meta-Agent Loops: Stress-Testing Policy Pinning, Budget Bounds, and Crash Recovery</a></p>",
+      "date_published": "2026-09-16T00:00:00+00:00",
+      "tags": [
+        "agent-evaluation",
+        "agent-trajectory",
+        "agent-tracing",
+        "regression-gating"
+      ]
+    },
+    {
+      "id": "doi:10.3390/ai7090359",
+      "url": "https://doi.org/10.3390/ai7090359",
+      "title": "Valid test scripts can still fail at runtime",
+      "content_html": "<p>A test scenario can look correct in review, pass a format check, and still break when the runner tries to use it. If agents draft acceptance tests from requirements, that gap can leave teams trusting artefacts that never become runnable checks.</p><p>Across 2,960 generated Gherkin scenarios, format validity was almost perfect, but only 78% loaded in Cucumber. Model costs differed by 157x, while judge scores spread by 0.36 points, so a polished-looking ranking did not by itself identify the best operational choice.</p><p>The useful question is not whether generated tests are valid text, but whether they execute in the exact runner and repository conventions that matter. Quality judges may help triage, but weak agreement on close calls means execution checks and cost need to sit beside them.</p><p><a href=\"https://doi.org/10.3390/ai7090359\">Valid but Not Always Runnable: An Open, Reproducible Benchmark of Large Language Models Drafting Gherkin Scenarios</a></p>",
+      "date_published": "2026-09-16T00:00:00+00:00",
+      "tags": [
+        "agent-evaluation",
+        "benchmarking",
+        "llm-as-a-judge",
+        "cost-efficiency"
+      ]
+    },
+    {
       "id": "arxiv:2609.03966",
       "url": "https://arxiv.org/abs/2609.03966",
       "title": "Your tool-call success rate may be a serving bug",

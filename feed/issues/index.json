@@ -1,9 +1,20 @@
 {
   "title": "kayzn.io AI Agent Evaluation Newsfeed",
-  "generated_at": "2026-09-09T10:43:26+00:00",
-  "issue_count": 4,
-  "entry_count": 37,
+  "generated_at": "2026-09-16T19:30:53+00:00",
+  "issue_count": 5,
+  "entry_count": 44,
   "issues": [
+    {
+      "date": "2026-09-16",
+      "range": "Sep 10-16, 2026",
+      "count": 7,
+      "headlines": [
+        "More judges can share the same blind spot",
+        "Debiased judges can hide meaningful quality gaps",
+        "Close release calls can fool agent judges"
+      ],
+      "path": "2026-09-16.json"
+    },
     {
       "date": "2026-09-09",
       "range": "Sep 3-9, 2026",
