@@ -1,0 +1,167 @@
+{
+  "date": "2026-09-23",
+  "range": "Sep 17-23, 2026",
+  "count": 8,
+  "entries": [
+    {
+      "id": "arxiv:2609.22512",
+      "headline": "Judge agreement can hide shared mistakes",
+      "paragraphs": [
+        "A panel of judges can look reassuringly consistent while repeating the same mistake. If your evaluation treats several matching verdicts as separate confirmation, it may be reporting more certainty than the evidence supports.",
+        "Across a ten-judge open-weight bank, the average overlap in mistakes meant the panel provided the equivalent of just 3.51 independent judges. In 28% of 100-pair panels, an independence-based vote called a result significant that an item-by-item check rejected.",
+        "High judge accuracy does not settle this: strong judges can still share blind spots. Are your confidence rules based on how many judges agree, or on whether their errors differ on the specific cases that matter?"
+      ],
+      "paper_title": "Agreement Overstates Evidence: Error Dependence in LLM Judge Consensus",
+      "paper_url": "https://arxiv.org/abs/2609.22512",
+      "paper_published": "2026-09-18",
+      "issue_date": "2026-09-23",
+      "issue_range": "Sep 17-23, 2026",
+      "themes": [
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "judge-robustness",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "doi:10.1145/3847307",
+      "headline": "Agreement Can Hide Shared Agent Errors",
+      "paragraphs": [
+        "Several agents can agree, sound confident, and still steer a workflow toward the same false claim. This is most likely to slip through when peers share a model family, a prompt pattern, or the same weak verification habit.",
+        "On obscure factual questions, four instances of one leading model gave the same wrong answer 56% of the time, rather than behaving like independent checkers. A cross-family rerun still found frequent shared failures, and changing the verifier materially changed how often errors spread.",
+        "Consensus is not evidence that a review step worked. Are your evaluators tested for resistance to a plausible but wrong peer answer, especially on the rare facts and edge cases where the system has least external grounding?"
+      ],
+      "paper_title": "When Too Many Cooks Spoil the Broth: Three Failure Modes of Multi-Agent LLM Reliability",
+      "paper_url": "https://doi.org/10.1145/3847307",
+      "paper_published": "2026-09-17",
+      "issue_date": "2026-09-23",
+      "issue_range": "Sep 17-23, 2026",
+      "themes": [
+        "multi-agent-systems",
+        "agent-evaluation",
+        "llm-judge-calibration",
+        "judge-robustness"
+      ]
+    },
+    {
+      "id": "arxiv:2609.25396",
+      "headline": "Parallel agent patches can conflict invisibly",
+      "paragraphs": [
+        "Two agents can each produce a clean patch that passes its own checks, yet their combined changes can quietly undo or contradict one another. Textual merge success is not evidence that parallel work still behaves as intended.",
+        "Across constructed Django helper tasks, independently working agents interfered in 97% of runs; giving them a message about the other change recovered 82%. In mined pull request pairs, corrected grading found only one interfering run, so the constructed cases show a failure mechanism rather than how often it occurs in ordinary repositories.",
+        "Grade the same test suite on each patch alone and on the merged result, or pre-existing failures can be mistaken for coordination problems. If agents work in parallel, what information about adjacent changes must they receive before their patches are accepted together?"
+      ],
+      "paper_title": "Passes Alone, Fails Together: Benchmarking Semantic Coordination in Parallel LLM-Agent Development",
+      "paper_url": "https://arxiv.org/abs/2609.25396",
+      "paper_published": "2026-09-21",
+      "issue_date": "2026-09-23",
+      "issue_range": "Sep 17-23, 2026",
+      "themes": [
+        "agent-evaluation",
+        "multi-agent-systems",
+        "tool-use",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2609.26550",
+      "headline": "Judge confidence can cut cost and hide errors",
+      "paragraphs": [
+        "A cheaper judge can look dependable until its confidence score is used to decide which verdicts get accepted. If that score is poorly tuned for the work in front of it, a cascade can quietly send the wrong cases down the cheap path.",
+        "Across three judge workloads, routing only uncertain cases to GPT-6 retained 99.6% of its accuracy at 47% of its measured fee. But the lower-cost judge was much weaker on one workload, and a confidence adjustment that helped another made two worse.",
+        "The question is not whether a judge sounds confident in general. Have its accept and escalate thresholds been checked on each workload, including the cases where a wrong verdict has the highest operational cost?"
+      ],
+      "paper_title": "JEV-as-a-Judge: Accept When Confident, Escalate When Unsure",
+      "paper_url": "https://arxiv.org/abs/2609.26550",
+      "paper_published": "2026-09-22",
+      "issue_date": "2026-09-23",
+      "issue_range": "Sep 17-23, 2026",
+      "themes": [
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "evaluation",
+        "cost-efficiency"
+      ]
+    },
+    {
+      "id": "arxiv:2609.24161",
+      "headline": "Tool design can hide agent execution failures",
+      "paragraphs": [
+        "An agent can choose the right operation and still fail when it has to fill in the arguments. Splitting an interface too finely, or bundling it too broadly, can change production outcomes while making a model regression look like a model problem.",
+        "Across controlled mock IoT-server tasks with nine local models, a four-tool interface reached 0.49 task completion, 16.4% above more fine-grained tools. Correct argument use also doubled, showing that the interface affected execution rather than just selection.",
+        "The tool-selection score picked a different winner from task completion. Live-server replication is still needed, but are your evaluations holding tool schemas fixed, and do they test whether selected tools actually run correctly?"
+      ],
+      "paper_title": "MCP-GRANITE Benchmark: GRANularity Interface TEsting for MCP-Based LLM Agents",
+      "paper_url": "https://arxiv.org/abs/2609.24161",
+      "paper_published": "2026-09-21",
+      "issue_date": "2026-09-23",
+      "issue_range": "Sep 17-23, 2026",
+      "themes": [
+        "agent-evaluation",
+        "tool-use",
+        "benchmarking",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2609.24128",
+      "headline": "Judge rankings can be skewed by presentation",
+      "paragraphs": [
+        "A judge can look highly discerning while quietly rewarding the answer shown first or penalising a longer one. That can make a ranking change when the order of two otherwise identical candidates is reversed.",
+        "Across 65,208 released pairwise judgments, accounting for answer position produced the biggest improvement on every dataset examined. In simulated rankings of 10,000 items, error against a neutral target fell from 0.1158 to 0.0237; uncertainty ranges also stayed reliable when many judgments came from the same prompt.",
+        "A high judge score is not enough if presentation choices are part of what it is scoring. Do your evaluation reports test swapped order and answer length, and do they show uncertainty at the prompt level rather than treating each comparison as independent?"
+      ],
+      "paper_title": "OSCAR: Order-aware Scoring and Calibration for AI Rankings",
+      "paper_url": "https://arxiv.org/abs/2609.24128",
+      "paper_published": "2026-09-21",
+      "issue_date": "2026-09-23",
+      "issue_range": "Sep 17-23, 2026",
+      "themes": [
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "judge-robustness",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "doi:10.1016/j.ipm.2026.105151",
+      "headline": "Judge rankings can hide weak relevance judgments",
+      "paragraphs": [
+        "An LLM judge can produce a convincing leaderboard while misreading whether individual retrieved passages actually answer the question. That makes a RAG evaluation look stable even when the labels behind it are not dependable.",
+        "On Brazilian Portuguese legal search, three judges had average relevance-score errors of 0.46-0.66 and only limited agreement with human reviewers. Yet their ordering of top results matched the human-based ordering at least 0.90, meaning rank-focused measures stayed useful while precision and recall did not.",
+        "A judge does not need to reproduce every human label to compare retrieval changes, but that is not a license to trust it everywhere. Have you checked, on your corpus and language, whether your judge preserves the decisions your release gate actually uses?"
+      ],
+      "paper_title": "NormasTCU \u2014 A Brazilian Portuguese IR dataset and an evaluation of LLM-as-a-judge for relevance assessment",
+      "paper_url": "https://doi.org/10.1016/j.ipm.2026.105151",
+      "paper_published": "2026-09-20",
+      "issue_date": "2026-09-23",
+      "issue_range": "Sep 17-23, 2026",
+      "themes": [
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "rag-evaluation",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2609.20584",
+      "headline": "Fluent safety reasoning can hide wrong classifications",
+      "paragraphs": [
+        "A safety agent can write a convincing hazard story while making the wrong call on how serious the case is. That gap is easy to miss when reviews reward coherent explanations more than the final risk category.",
+        "Across 3,000 de-identified automotive hazard cases, nine frontier models struggled with the required safety labels: the best score was 0.261. Asking models to show their reasoning raised the rate of wrongly treating reference risk cases as no special safety concern from 14.9% to 41.0%.",
+        "This does not show that agents cannot help draft hazard artefacts. It asks whether your evaluation separately checks the final classification, the scenario details behind it, and cases where a reassuring explanation masks an unsafe decision; the evidence covers unintended drive-force or torque faults only."
+      ],
+      "paper_title": "SAFARI: An Industrial Benchmark for LLM-Assisted Hazard Analysis and Risk Assessment",
+      "paper_url": "https://arxiv.org/abs/2609.20584",
+      "paper_published": "2026-09-17",
+      "issue_date": "2026-09-23",
+      "issue_range": "Sep 17-23, 2026",
+      "themes": [
+        "benchmarking",
+        "agent-evaluation",
+        "llm-as-a-judge",
+        "safety"
+      ]
+    }
+  ]
+}
