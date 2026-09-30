@@ -1,9 +1,20 @@
 {
   "title": "kayzn.io AI Agent Evaluation Newsfeed",
-  "generated_at": "2026-09-23T10:42:40+00:00",
-  "issue_count": 6,
-  "entry_count": 52,
+  "generated_at": "2026-09-30T11:51:43+00:00",
+  "issue_count": 7,
+  "entry_count": 60,
   "issues": [
+    {
+      "date": "2026-09-30",
+      "range": "Sep 24-30, 2026",
+      "count": 8,
+      "headlines": [
+        "Security scores can fail before agents do",
+        "Frozen judges can misread new agent versions",
+        "Passing agents may be taking hidden shortcuts"
+      ],
+      "path": "2026-09-30.json"
+    },
     {
       "date": "2026-09-23",
       "range": "Sep 17-23, 2026",
