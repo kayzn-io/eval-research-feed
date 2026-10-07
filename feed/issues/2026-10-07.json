@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-07",
+  "range": "Oct 1-7, 2026",
+  "count": 8,
+  "entries": [
+    {
+      "id": "arxiv:2610.01833",
+      "headline": "Correct answers can still hide agent regressions",
+      "paragraphs": [
+        "An agent can return the right number while using the wrong tool, touching data outside its brief, or saving something it should not. Those failures are easy to miss when release gates inspect only the final answer.",
+        "Across two enterprise agent skills, 162 of 175 runs that passed every applicable final numerical check still had a detected deviation. The checks compared live API results, reusable tests and the recorded steps, with a narrowly limited model-based review for cases rules could not cover.",
+        "A passing output is not evidence that the run was safe or repeatable. Which parts of your agent's trace are contractual, and would a regression gate catch a change in order, scope, tool use or persistence before production does?"
+      ],
+      "paper_title": "Continuous Process-Level Evaluation for Evolving Enterprise AI Agent Skills",
+      "paper_url": "https://arxiv.org/abs/2610.01833",
+      "paper_published": "2026-10-01",
+      "issue_date": "2026-10-07",
+      "issue_range": "Oct 1-7, 2026",
+      "themes": [
+        "agent-evaluation",
+        "agent-trajectory",
+        "regression-gating",
+        "llm-as-a-judge"
+      ]
+    },
+    {
+      "id": "arxiv:2610.03315",
+      "headline": "Cheaper failure diagnosis can still miss cases",
+      "paragraphs": [
+        "When an agent fails, the expensive part is often figuring out where the run went wrong. Teams can end up sending the same trace through several judging steps, yet still lack a clear view of whether the failure was found and correctly pinpointed.",
+        "A fixed-budget summary of each run, checked against offline rules and then judged once against a rubric, grouped failures more closely to human reviewers. Its top-three match rate beat a multi-call comparison by roughly 20-35 percentage points, while GPT-5-mini evaluation cost fell from $2.4628 to $0.4155.",
+        "That does not mean rules can replace judgment: rule-only checks found just 56.8% of failures in one set and 31.0% in another, with policy-constrained interactions especially difficult. Are you reporting both how accurately your evaluator explains detected failures and how many failures it never detects?"
+      ],
+      "paper_title": "Lightweight, Rubric-Guided Trajectory Evaluation for Production AI Agents",
+      "paper_url": "https://arxiv.org/abs/2610.03315",
+      "paper_published": "2026-10-02",
+      "issue_date": "2026-10-07",
+      "issue_range": "Oct 1-7, 2026",
+      "themes": [
+        "agent-trajectory",
+        "llm-as-a-judge",
+        "agent-tracing",
+        "cost-efficiency"
+      ]
+    },
+    {
+      "id": "arxiv:2610.01218",
+      "headline": "Your RAG gate may trust the wrong judge",
+      "paragraphs": [
+        "A release can look safe because the judge returns tidy scores, while it misses unsupported answers or behaves differently on one content domain. That leaves a regression gate promoting a version on confidence that has not been checked where it matters.",
+        "Tests of an evidence-first gate found that a stronger judge still varied widely by domain, and a smaller judge was materially worse at ranking answers that followed the evidence. In simulated regressions, the fuller gate held unsafe promotion to 22.2%-35.1% by requiring missing-evidence outcomes, layered checks, and validation of the judge itself.",
+        "The release result comes from simulation, not a public production deployment. Before promoting a RAG change, can your gate distinguish missing evidence from a good answer, and do you know whether its judge is reliable for each domain you serve?"
+      ],
+      "paper_title": "AGO AI Quality Gate: Evidence-First Release Decisions for Retrieval-Augmented Generation",
+      "paper_url": "https://arxiv.org/abs/2610.01218",
+      "paper_published": "2026-10-01",
+      "issue_date": "2026-10-07",
+      "issue_range": "Oct 1-7, 2026",
+      "themes": [
+        "rag-evaluation",
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "regression-gating"
+      ]
+    },
+    {
+      "id": "arxiv:2610.01618",
+      "headline": "One Agent Score Can Hide System Instability",
+      "paragraphs": [
+        "A run that looks reliable in a dashboard may owe more to a lucky attempt than to the agent design. Small changes in what the system can see or how it checks work can matter more than another prompt tweak.",
+        "Across 8,640 runs on four scientific tasks, 54% of the difference between genuine attempts came from repeating the same setup. The information supplied to the agent had the largest effect on every task, while a dedicated checking tool changed behaviour far more than asking the model to verify its work.",
+        "A pass rate alone cannot tell you whether an agent is dependable, affordable, or controllable. Are you measuring repeatability, completion, cost and runtime alongside outcomes, and testing whether checks are enforced by the system rather than merely requested in text?"
+      ],
+      "paper_title": "Agents Are Systems, Not Models: Rethinking Agentic Evaluation",
+      "paper_url": "https://arxiv.org/abs/2610.01618",
+      "paper_published": "2026-10-01",
+      "issue_date": "2026-10-07",
+      "issue_range": "Oct 1-7, 2026",
+      "themes": [
+        "agent-evaluation",
+        "evaluation-metrics",
+        "agent-trajectory",
+        "llm-judge-calibration"
+      ]
+    },
+    {
+      "id": "arxiv:2610.04184",
+      "headline": "Agent built evaluations can miss real ranking",
+      "paragraphs": [
+        "A compact evaluation can look convincing while quietly rewarding the wrong agent. Teams may see improvement on the checks they can inspect, only to find that production choices or external tests tell a different story.",
+        "Nine agent researchers built fixed evaluators for coding, co-work, and reasoning, then their rankings were checked against 14 separate benchmarks. The best matched the target ordering in about 75% of candidate pairs, below the 91% limit implied by disagreement in the targets; the development-score leader did not win on sealed tests.",
+        "This means an evaluator is not validated just because it reproduces visible scores. Does yours separately test score accuracy, ordering of close candidates, run cost, and whether its rankings hold on tasks it was not designed against?"
+      ],
+      "paper_title": "EvalResearchBench: Can AI Agents Design Their Own Evaluations?",
+      "paper_url": "https://arxiv.org/abs/2610.04184",
+      "paper_published": "2026-10-03",
+      "issue_date": "2026-10-07",
+      "issue_range": "Oct 1-7, 2026",
+      "themes": [
+        "agent-evaluation",
+        "benchmarking",
+        "evaluation-metrics",
+        "llm-judge-calibration"
+      ]
+    },
+    {
+      "id": "arxiv:2610.07755",
+      "headline": "Judge scores can create false A/B wins",
+      "paragraphs": [
+        "A judge can score an answer differently because of what it saw just before, and averages can turn uneven result spread into an apparent quality gap. Randomising the queue helps, but it does not make every A/B conclusion safe.",
+        "In simulated comparisons where two groups had the same average quality but different spread, simple averaging produced false positives 54.9% of the time at the largest sample size. The judges also showed order effects across shuffled batches, which an explicit sequential model was able to predict reliably.",
+        "A score may still be useful for ranking alternatives without being sound evidence that one release is better overall. Before acting on a judge-led A/B result, ask whether score order, batch composition, or differing variability could explain the gap."
+      ],
+      "paper_title": "Trustworthy Method Comparison with AI Judges: Estimation and Design under Order, Batch, and Aggregation Effects",
+      "paper_url": "https://arxiv.org/abs/2610.07755",
+      "paper_published": "2026-10-06",
+      "issue_date": "2026-10-07",
+      "issue_range": "Oct 1-7, 2026",
+      "themes": [
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "judge-robustness",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2610.02492",
+      "headline": "Judges can rank answers yet misstate acceptance",
+      "paragraphs": [
+        "A judge can consistently put stronger agent outputs above weaker ones while still making your pass-rate dashboard misleading. That becomes costly when a score is used to claim a workflow is acceptable, safe, or ready for a workplace.",
+        "Across 33 judge configurations, many got the order of paired answers broadly right, but their estimated acceptance ranged from 3.0% to 97.9%; matched workers accepted 61.1%. Even after score adjustment, the judges did not closely match how individual workers rated the same outputs.",
+        "A ranking check is not proof that a threshold or aggregate acceptance claim is trustworthy. Does your judge validation test the exact pass rate and reporting level used in decisions, or only whether it usually picks the better answer?"
+      ],
+      "paper_title": "Right Order, Wrong Scale: Auditing LLM Judges for Occupational AI Measurement",
+      "paper_url": "https://arxiv.org/abs/2610.02492",
+      "paper_published": "2026-10-01",
+      "issue_date": "2026-10-07",
+      "issue_range": "Oct 1-7, 2026",
+      "themes": [
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "agent-evaluation",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2610.02926",
+      "headline": "Wrong Script Can Look Like Wrong Answers",
+      "paragraphs": [
+        "An agent can know the answer yet fail your evaluation because a mixed-language prompt nudges it into a different writing system. If your grader expects Latin text, a correct Hindi-script answer may be logged as a hallucination or retrieval failure.",
+        "In tests on two factual question sets, Hindi distractor text made 58.2% of one instruction-tuned model's answers switch to Devanagari. Manual review found that many of those supposedly failed answers were semantically correct, meaning the raw error signal overstated the problem.",
+        "For multilingual RAG or agent evaluations, answer correctness and script choice need separate checks. The result is a diagnostic study rather than proof for every current model, but it raises a practical question: are language-format mismatches being counted as reasoning failures in your scorecards?"
+      ],
+      "paper_title": "Output Language Confusion under Multilingual Prompt Contamination",
+      "paper_url": "https://arxiv.org/abs/2610.02926",
+      "paper_published": "2026-10-02",
+      "issue_date": "2026-10-07",
+      "issue_range": "Oct 1-7, 2026",
+      "themes": [
+        "agent-evaluation",
+        "evaluation-metrics",
+        "rag-evaluation",
+        "llm-judge-calibration"
+      ]
+    }
+  ]
+}

@@ -7,6 +7,110 @@
   "language": "en-us",
   "items": [
     {
+      "id": "arxiv:2610.01833",
+      "url": "https://arxiv.org/abs/2610.01833",
+      "title": "Correct answers can still hide agent regressions",
+      "content_html": "<p>An agent can return the right number while using the wrong tool, touching data outside its brief, or saving something it should not. Those failures are easy to miss when release gates inspect only the final answer.</p><p>Across two enterprise agent skills, 162 of 175 runs that passed every applicable final numerical check still had a detected deviation. The checks compared live API results, reusable tests and the recorded steps, with a narrowly limited model-based review for cases rules could not cover.</p><p>A passing output is not evidence that the run was safe or repeatable. Which parts of your agent's trace are contractual, and would a regression gate catch a change in order, scope, tool use or persistence before production does?</p><p><a href=\"https://arxiv.org/abs/2610.01833\">Continuous Process-Level Evaluation for Evolving Enterprise AI Agent Skills</a></p>",
+      "date_published": "2026-10-07T00:00:00+00:00",
+      "tags": [
+        "agent-evaluation",
+        "agent-trajectory",
+        "regression-gating",
+        "llm-as-a-judge"
+      ]
+    },
+    {
+      "id": "arxiv:2610.03315",
+      "url": "https://arxiv.org/abs/2610.03315",
+      "title": "Cheaper failure diagnosis can still miss cases",
+      "content_html": "<p>When an agent fails, the expensive part is often figuring out where the run went wrong. Teams can end up sending the same trace through several judging steps, yet still lack a clear view of whether the failure was found and correctly pinpointed.</p><p>A fixed-budget summary of each run, checked against offline rules and then judged once against a rubric, grouped failures more closely to human reviewers. Its top-three match rate beat a multi-call comparison by roughly 20-35 percentage points, while GPT-5-mini evaluation cost fell from $2.4628 to $0.4155.</p><p>That does not mean rules can replace judgment: rule-only checks found just 56.8% of failures in one set and 31.0% in another, with policy-constrained interactions especially difficult. Are you reporting both how accurately your evaluator explains detected failures and how many failures it never detects?</p><p><a href=\"https://arxiv.org/abs/2610.03315\">Lightweight, Rubric-Guided Trajectory Evaluation for Production AI Agents</a></p>",
+      "date_published": "2026-10-07T00:00:00+00:00",
+      "tags": [
+        "agent-trajectory",
+        "llm-as-a-judge",
+        "agent-tracing",
+        "cost-efficiency"
+      ]
+    },
+    {
+      "id": "arxiv:2610.01218",
+      "url": "https://arxiv.org/abs/2610.01218",
+      "title": "Your RAG gate may trust the wrong judge",
+      "content_html": "<p>A release can look safe because the judge returns tidy scores, while it misses unsupported answers or behaves differently on one content domain. That leaves a regression gate promoting a version on confidence that has not been checked where it matters.</p><p>Tests of an evidence-first gate found that a stronger judge still varied widely by domain, and a smaller judge was materially worse at ranking answers that followed the evidence. In simulated regressions, the fuller gate held unsafe promotion to 22.2%-35.1% by requiring missing-evidence outcomes, layered checks, and validation of the judge itself.</p><p>The release result comes from simulation, not a public production deployment. Before promoting a RAG change, can your gate distinguish missing evidence from a good answer, and do you know whether its judge is reliable for each domain you serve?</p><p><a href=\"https://arxiv.org/abs/2610.01218\">AGO AI Quality Gate: Evidence-First Release Decisions for Retrieval-Augmented Generation</a></p>",
+      "date_published": "2026-10-07T00:00:00+00:00",
+      "tags": [
+        "rag-evaluation",
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "regression-gating"
+      ]
+    },
+    {
+      "id": "arxiv:2610.01618",
+      "url": "https://arxiv.org/abs/2610.01618",
+      "title": "One Agent Score Can Hide System Instability",
+      "content_html": "<p>A run that looks reliable in a dashboard may owe more to a lucky attempt than to the agent design. Small changes in what the system can see or how it checks work can matter more than another prompt tweak.</p><p>Across 8,640 runs on four scientific tasks, 54% of the difference between genuine attempts came from repeating the same setup. The information supplied to the agent had the largest effect on every task, while a dedicated checking tool changed behaviour far more than asking the model to verify its work.</p><p>A pass rate alone cannot tell you whether an agent is dependable, affordable, or controllable. Are you measuring repeatability, completion, cost and runtime alongside outcomes, and testing whether checks are enforced by the system rather than merely requested in text?</p><p><a href=\"https://arxiv.org/abs/2610.01618\">Agents Are Systems, Not Models: Rethinking Agentic Evaluation</a></p>",
+      "date_published": "2026-10-07T00:00:00+00:00",
+      "tags": [
+        "agent-evaluation",
+        "evaluation-metrics",
+        "agent-trajectory",
+        "llm-judge-calibration"
+      ]
+    },
+    {
+      "id": "arxiv:2610.04184",
+      "url": "https://arxiv.org/abs/2610.04184",
+      "title": "Agent built evaluations can miss real ranking",
+      "content_html": "<p>A compact evaluation can look convincing while quietly rewarding the wrong agent. Teams may see improvement on the checks they can inspect, only to find that production choices or external tests tell a different story.</p><p>Nine agent researchers built fixed evaluators for coding, co-work, and reasoning, then their rankings were checked against 14 separate benchmarks. The best matched the target ordering in about 75% of candidate pairs, below the 91% limit implied by disagreement in the targets; the development-score leader did not win on sealed tests.</p><p>This means an evaluator is not validated just because it reproduces visible scores. Does yours separately test score accuracy, ordering of close candidates, run cost, and whether its rankings hold on tasks it was not designed against?</p><p><a href=\"https://arxiv.org/abs/2610.04184\">EvalResearchBench: Can AI Agents Design Their Own Evaluations?</a></p>",
+      "date_published": "2026-10-07T00:00:00+00:00",
+      "tags": [
+        "agent-evaluation",
+        "benchmarking",
+        "evaluation-metrics",
+        "llm-judge-calibration"
+      ]
+    },
+    {
+      "id": "arxiv:2610.07755",
+      "url": "https://arxiv.org/abs/2610.07755",
+      "title": "Judge scores can create false A/B wins",
+      "content_html": "<p>A judge can score an answer differently because of what it saw just before, and averages can turn uneven result spread into an apparent quality gap. Randomising the queue helps, but it does not make every A/B conclusion safe.</p><p>In simulated comparisons where two groups had the same average quality but different spread, simple averaging produced false positives 54.9% of the time at the largest sample size. The judges also showed order effects across shuffled batches, which an explicit sequential model was able to predict reliably.</p><p>A score may still be useful for ranking alternatives without being sound evidence that one release is better overall. Before acting on a judge-led A/B result, ask whether score order, batch composition, or differing variability could explain the gap.</p><p><a href=\"https://arxiv.org/abs/2610.07755\">Trustworthy Method Comparison with AI Judges: Estimation and Design under Order, Batch, and Aggregation Effects</a></p>",
+      "date_published": "2026-10-07T00:00:00+00:00",
+      "tags": [
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "judge-robustness",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2610.02492",
+      "url": "https://arxiv.org/abs/2610.02492",
+      "title": "Judges can rank answers yet misstate acceptance",
+      "content_html": "<p>A judge can consistently put stronger agent outputs above weaker ones while still making your pass-rate dashboard misleading. That becomes costly when a score is used to claim a workflow is acceptable, safe, or ready for a workplace.</p><p>Across 33 judge configurations, many got the order of paired answers broadly right, but their estimated acceptance ranged from 3.0% to 97.9%; matched workers accepted 61.1%. Even after score adjustment, the judges did not closely match how individual workers rated the same outputs.</p><p>A ranking check is not proof that a threshold or aggregate acceptance claim is trustworthy. Does your judge validation test the exact pass rate and reporting level used in decisions, or only whether it usually picks the better answer?</p><p><a href=\"https://arxiv.org/abs/2610.02492\">Right Order, Wrong Scale: Auditing LLM Judges for Occupational AI Measurement</a></p>",
+      "date_published": "2026-10-07T00:00:00+00:00",
+      "tags": [
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "agent-evaluation",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2610.02926",
+      "url": "https://arxiv.org/abs/2610.02926",
+      "title": "Wrong Script Can Look Like Wrong Answers",
+      "content_html": "<p>An agent can know the answer yet fail your evaluation because a mixed-language prompt nudges it into a different writing system. If your grader expects Latin text, a correct Hindi-script answer may be logged as a hallucination or retrieval failure.</p><p>In tests on two factual question sets, Hindi distractor text made 58.2% of one instruction-tuned model's answers switch to Devanagari. Manual review found that many of those supposedly failed answers were semantically correct, meaning the raw error signal overstated the problem.</p><p>For multilingual RAG or agent evaluations, answer correctness and script choice need separate checks. The result is a diagnostic study rather than proof for every current model, but it raises a practical question: are language-format mismatches being counted as reasoning failures in your scorecards?</p><p><a href=\"https://arxiv.org/abs/2610.02926\">Output Language Confusion under Multilingual Prompt Contamination</a></p>",
+      "date_published": "2026-10-07T00:00:00+00:00",
+      "tags": [
+        "agent-evaluation",
+        "evaluation-metrics",
+        "rag-evaluation",
+        "llm-judge-calibration"
+      ]
+    },
+    {
       "id": "arxiv:2609.32691",
       "url": "https://arxiv.org/abs/2609.32691",
       "title": "Security scores can fail before agents do",
@@ -680,110 +784,6 @@
         "synthetic-data",
         "evaluation-metrics",
         "production-monitoring"
-      ]
-    },
-    {
-      "id": "arxiv:2608.19741",
-      "url": "https://arxiv.org/abs/2608.19741",
-      "title": "One success does not mean your agent is reliable",
-      "content_html": "<p>An agent that finishes a workflow once, cleanly, with valid tool calls, can still be wrong most of the time you run it again. Single-run success rates hide that, and clean termination hides it further, because the backend state can be broken even when the tool calls look fine.</p><p>A new benchmark grades 507 stateful business workflows against the actual backend state, not the final answer, running each task 20 times across 12 models. The best model succeeds at least once on 91% of tasks but passes all 20 attempts on only 25%, and tool-use failures make up 77.5% of failed runs even when calls appear valid.</p><p>That gap between &quot;worked once&quot; and &quot;works every time&quot; is a property of the metric, not the agent. Before setting a pass rate as a shipping bar, ask whether it was measured once or twenty times, and against the answer or against the state it actually left behind.</p><p><a href=\"https://arxiv.org/abs/2608.19741\">One Success Isn't Reliability: Thinkingbox, a Sandbox and Benchmark for Agents in Stateful Business Workflows</a></p>",
-      "date_published": "2026-08-26T00:00:00+00:00",
-      "tags": [
-        "agent-evaluation",
-        "regression-gating",
-        "tool-use",
-        "reproducibility"
-      ]
-    },
-    {
-      "id": "arxiv:2608.22432",
-      "url": "https://arxiv.org/abs/2608.22432",
-      "title": "Your LLM judge may flip rankings by language",
-      "content_html": "<p>If you picked a judge model by testing it in English and assumed that holds everywhere, it might not. Which backbone scores best often depends on the prompt language, not just the model itself.</p><p>Across nearly 8,000 judge runs spanning 6 backbones, 8 languages, and 55 tasks, most backbone pairs showed statistically significant rank reversal across languages. A label-free correction that separates out this language-backbone interaction lifted agreement with human preference data from 68.7% to 76.6%, a 7.9 point gain.</p><p>So the real question is not &quot;which judge is best&quot; but &quot;best for which traffic.&quot; A judge validated once in English can be quietly wrong for every other language it scores, and this fix only helps if uniform judging, not per-language specialization, is actually the goal.</p><p><a href=\"https://arxiv.org/abs/2608.22432\">Rank Reversal in Multilingual LLM Judges: A Label-Free Double-Centering Calibrator</a></p>",
-      "date_published": "2026-08-26T00:00:00+00:00",
-      "tags": [
-        "llm-judge-calibration",
-        "llm-as-a-judge",
-        "judge-robustness",
-        "evaluation-metrics"
-      ]
-    },
-    {
-      "id": "arxiv:2608.18300",
-      "url": "https://arxiv.org/abs/2608.18300",
-      "title": "Netflix treats its LLM judge as a living system",
-      "content_html": "<p>If your quality judge was tuned once at launch, it is probably already drifting from what your generators produce now, and nothing is watching for that.</p><p>Netflix runs its judge through four ongoing phases: human-labeled benchmarks, rubric tuning by a meta-judge trained on human rationales, live gating plus feedback, and drift monitoring that re-triggers tuning. That meta-judge matched trained raters 98.6% of the time on 300 rationale pairs, and failed outputs get retried up to three times using the judge's own reason, recovering 80%+ of achievable lift by then.</p><p>A flat pass rate at zero retries, tracked over time, cheaply tells you whether your generator regressed or your judge drifted. Do you monitor that distinction, or only the pass rate itself?</p><p><a href=\"https://arxiv.org/abs/2608.18300\">The Lifecycle of LLM-as-a-Judge for Large-Scale Recommendation Explanations</a></p>",
-      "date_published": "2026-08-26T00:00:00+00:00",
-      "tags": [
-        "llm-as-a-judge",
-        "production-monitoring",
-        "human-in-the-loop",
-        "regression-gating"
-      ]
-    },
-    {
-      "id": "arxiv:2608.20614",
-      "url": "https://arxiv.org/abs/2608.20614",
-      "title": "Passing a skill review says little about it helping",
-      "content_html": "<p>Teams that vet reusable agent skills often just read the skill file: check the structure, check the docs, approve it. That review tells you almost nothing about whether the skill actually helps once an agent runs it live.</p><p>A study ran 947 paired tasks, same agent and harness, once with a skill and once without, and measured the difference. Skill use lifted results in 689 cases and hurt them in 87, with the biggest gains showing up in how the agent executed and checked its own work, not just the final answer. Structural document scans and live-run grading on the same skills correlated at only 0.14.</p><p>If your gate for shipping a skill only reads the file, you have almost no signal on what it does to a running agent. The question worth asking is whether your review measures the artifact or its paired effect on a real trajectory.</p><p><a href=\"https://arxiv.org/abs/2608.20614\">Evaluating Skills, Not Just Agents: Agentic Continuous Evaluation of Skills</a></p>",
-      "date_published": "2026-08-26T00:00:00+00:00",
-      "tags": [
-        "agent-evaluation",
-        "regression-gating",
-        "agent-trajectory",
-        "observability"
-      ]
-    },
-    {
-      "id": "arxiv:2608.23663",
-      "url": "https://arxiv.org/abs/2608.23663",
-      "title": "Wrong answers can look exactly like right ones",
-      "content_html": "<p>You probably assume a wrong answer looks a little off, hedged, or flagged by low confidence. An audit of a small on-device model found the opposite: it confabulated on 69% of false-premise questions while refusing 18% of harmless ones, and its self-reported confidence barely distinguished right from wrong.</p><p>Checking fifteen visible features of the output, including that confidence score, correctly-confident and wrongly-confident answers were statistically indistinguishable. A black-box wrapper that reruns the model for consistency, with no internal access, cut confident wrong answers from 75% to 3% and lifted usable accuracy from 43% to 83%.</p><p>If your monitoring leans on how an answer looks or what the model says about itself, ask whether that signal has ever been tested against ground truth. One threshold also will not fit both over-answering and over-refusing failure modes at once.</p><p><a href=\"https://arxiv.org/abs/2608.23663\">Confidently Wrong, Silently So: Auditing Undetectable Failures of a Deployed On-Device Language Model</a></p>",
-      "date_published": "2026-08-26T00:00:00+00:00",
-      "tags": [
-        "production-monitoring",
-        "guardrails",
-        "observability",
-        "safety"
-      ]
-    },
-    {
-      "id": "arxiv:2608.24419",
-      "url": "https://arxiv.org/abs/2608.24419",
-      "title": "Your LLM judge may miss real changes in output",
-      "content_html": "<p>If your judge model gives the same verdict across two runs, you probably assume it's working. But stability isn't the same as noticing when the actual thing changed, and most judges are good at one and weak at the other.</p><p>Testing 7 judges across 4 domains, researchers held stability high (0.945) and checked sensitivity: judges only moved their verdict 31.9% of the time when the substance actually shifted, and were notably worse at catching changes in strength (0.262) than in scope (0.383), consistently across all 7. Separately, models scoring on surface form alone reproduced up to 67.4% of MT-Bench human votes.</p><p>That means a judge can pass every stability check you run and still not be measuring what you think it's measuring. Worth asking: does your eval suite test whether the judge notices real changes, or only whether it agrees with itself?</p><p><a href=\"https://arxiv.org/abs/2608.24419\">A Judge Should Know What Changed:Construct Validity for LLM-as-a-Judge Evaluation</a></p>",
-      "date_published": "2026-08-26T00:00:00+00:00",
-      "tags": [
-        "llm-as-a-judge",
-        "judge-robustness",
-        "llm-judge-calibration",
-        "evaluation-metrics"
-      ]
-    },
-    {
-      "id": "arxiv:2608.15980",
-      "url": "https://arxiv.org/abs/2608.15980",
-      "title": "Your leaderboard may be stable for the wrong reason",
-      "content_html": "<p>If you validate a judge or build a reward model against &quot;gold&quot; preference labels, you assume the label is settled. It often isn't: on items where each labeling pool agreed internally, experts and crowdworkers still picked a different winning response 9.2% of the time on one benchmark and 8.5% on another, with disagreement on the underlying label itself over 23%.</p><p>Yet a six-model leaderboard built from either pool came out bit-identical. That stability is misleading: resampling the same data at the item level flips at least one model's rank in 28% of draws, and shuffles a twenty-model leaderboard almost every time. Judges also lean toward the crowd label over the expert one.</p><p>So a leaderboard surviving a pool swap tells you little, and if you read individual labels for judge checks or error analysis, ask which pool made the gold you're trusting.</p><p><a href=\"https://arxiv.org/abs/2608.15980\">Whose Gold? Annotator-Pool Disagreement Is Large at the Item Level, and Hidden by Small Leaderboards</a></p>",
-      "date_published": "2026-08-26T00:00:00+00:00",
-      "tags": [
-        "human-in-the-loop-calibration",
-        "data-quality",
-        "benchmarking",
-        "llm-as-a-judge"
-      ]
-    },
-    {
-      "id": "arxiv:2608.24753",
-      "url": "https://arxiv.org/abs/2608.24753",
-      "title": "Where you spend labeling budget changes what you learn",
-      "content_html": "<p>If your RAG system looks fine on marginal metrics, you may still not know whether the generator behaves correctly given what retrieval actually returns versus just getting lucky on the final answer.</p><p>A pipeline model separating retrieval success, abstention, and correctness found that spending a fixed label budget on retrieval-success annotations captured 65.6% and 58.0% of the information full joint labeling gives about policy adherence, versus 29.3% and 40.8% from task-success labels. Separately, adding 5,000 judge-labeled samples to 200 human ones barely narrowed uncertainty, because the judges' false-positive rate made each automated label nearly worthless.</p><p>Both results are setup-specific, but they turn label allocation into something computable: which annotation actually resolves the question you're asking, and whether your judge is cheap or just cheap-looking.</p><p><a href=\"https://arxiv.org/abs/2608.24753\">The RAT: A Unified Bayesian Model for RAG Evaluation</a></p>",
-      "date_published": "2026-08-26T00:00:00+00:00",
-      "tags": [
-        "rag-evaluation",
-        "llm-judge-calibration",
-        "human-in-the-loop-calibration",
-        "evaluation-metrics"
       ]
     }
   ]

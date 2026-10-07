@@ -1,9 +1,20 @@
 {
   "title": "kayzn.io AI Agent Evaluation Newsfeed",
-  "generated_at": "2026-09-30T11:51:43+00:00",
-  "issue_count": 7,
-  "entry_count": 60,
+  "generated_at": "2026-10-07T12:35:31+00:00",
+  "issue_count": 8,
+  "entry_count": 68,
   "issues": [
+    {
+      "date": "2026-10-07",
+      "range": "Oct 1-7, 2026",
+      "count": 8,
+      "headlines": [
+        "Correct answers can still hide agent regressions",
+        "Cheaper failure diagnosis can still miss cases",
+        "Your RAG gate may trust the wrong judge"
+      ],
+      "path": "2026-10-07.json"
+    },
     {
       "date": "2026-09-30",
       "range": "Sep 24-30, 2026",
