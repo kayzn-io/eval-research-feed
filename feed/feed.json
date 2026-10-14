@@ -7,6 +7,110 @@
   "language": "en-us",
   "items": [
     {
+      "id": "arxiv:2610.17724",
+      "url": "https://arxiv.org/abs/2610.17724",
+      "title": "Evidence must support every agent verdict",
+      "content_html": "<p>A run can look complete while a key claim is unsupported, or a judge can approve it because the trace sounds plausible. That leaves teams unable to tell whether a failure came from the outcome, the steps taken, or a missing piece of state.</p><p>On paired runs with injected faults and clean controls, an evidence-first checker caught 97% of the failures while flagging 2% of clean runs. It checked individual claims against final state and execution records rather than treating a trace as proof by itself.</p><p>The result does not show that every simulated-task score will carry over to live systems. But if a judgment is disputed, can each pass or fail be traced to the specific evidence that supports it, and can outcome, process, and state checks disagree visibly?</p><p><a href=\"https://arxiv.org/abs/2610.17724\">Evidence-First Agentic Verification</a></p>",
+      "date_published": "2026-10-14T00:00:00+00:00",
+      "tags": [
+        "agent-evaluation",
+        "agent-trajectory",
+        "llm-as-a-judge",
+        "judge-robustness"
+      ]
+    },
+    {
+      "id": "arxiv:2610.16067",
+      "url": "https://arxiv.org/abs/2610.16067",
+      "title": "Your benchmark may be grading its own mistake",
+      "content_html": "<p>A run can look successful even when the check that assigns the score has changed the system after the fact. That leaves teams comparing agent changes against a number they cannot fully trust.</p><p>In archived episodes, replaying the records with corrected scoring cut recorded success from 94.3% to 65.5%. The audit also found that its checks detected 54 of 57 separable defect and task combinations, exposing a specific class of failures that ordinary scoring can miss.</p><p>The immediate question is whether your evaluator can prove that scoring does not alter the state it later judges. Replayable traces help distinguish an agent regression from a grading error, but these results do not establish that every configuration effect will carry to a different task or harness.</p><p><a href=\"https://arxiv.org/abs/2610.16067\">When Agent Evaluation Becomes Unreliable: An Empirical Study of Oracle Failures and Configuration-Dependent Measurement in an LLM Agent Benchmark</a></p>",
+      "date_published": "2026-10-14T00:00:00+00:00",
+      "tags": [
+        "agent-evaluation",
+        "evaluation",
+        "reproducibility",
+        "agent-tracing"
+      ]
+    },
+    {
+      "id": "arxiv:2610.14477",
+      "url": "https://arxiv.org/abs/2610.14477",
+      "title": "Robustness tests can silently change the task",
+      "content_html": "<p>A tool-using agent can look robust or easily broken when an evaluator accepts a changed task as equivalent to the original. That risk appears when a test alters inputs, tool arguments, or constraints and checks only whether the run still completes.</p><p>For Mistral, a similarity check marked every task as successfully attacked, while executable task rules accepted only 26 of 64 attacks. The rejected cases had substituted something that changed what the agent was supposed to do.</p><p>A replayable run or valid output format is not proof that the same task was tested. Which facts must stay fixed, which edits are allowed, what outcomes remain feasible, and what the agent can see should be explicit before a robustness score is trusted.</p><p><a href=\"https://arxiv.org/abs/2610.14477\">What Counts as the Same Task? Executable Contracts for Robustness Evaluation of Tool-Using Agents</a></p>",
+      "date_published": "2026-10-14T00:00:00+00:00",
+      "tags": [
+        "agent-evaluation",
+        "tool-use",
+        "benchmarking",
+        "safety"
+      ]
+    },
+    {
+      "id": "arxiv:2610.17895",
+      "url": "https://arxiv.org/abs/2610.17895",
+      "title": "Watching the work changes the verdict",
+      "content_html": "<p>A judge can approve an agent or application that looks correct in code and screenshots, yet fails when someone actually clicks through it. That gap is easy to miss when evaluation sees only the final state.</p><p>Tests that added recorded computer interactions raised preference predictions to 69.1% and requirement checks to 81.6%. In repair loops, feedback based on those interactions fixed more broken requirements than code-only feedback.</p><p>The useful question is not just whether your judge can inspect the result, but whether it observes the path taken to get there. This does not settle which interaction policy is worth its cost, since the quality of the recorded actions shaped the verdict.</p><p><a href=\"https://arxiv.org/abs/2610.17895\">Interaction-as-a-Judge</a></p>",
+      "date_published": "2026-10-14T00:00:00+00:00",
+      "tags": [
+        "agent-evaluation",
+        "llm-as-a-judge",
+        "tool-use",
+        "agent-trajectory"
+      ]
+    },
+    {
+      "id": "arxiv:2610.13303",
+      "url": "https://arxiv.org/abs/2610.13303",
+      "title": "Judge consensus can hide a calibration problem",
+      "content_html": "<p>A rewritten scoring rubric can make your judge panel agree more often while leaving it no closer to the people whose standards it is meant to reflect. That can turn an apparently cleaner evaluation signal into a more confidently wrong release gate.</p><p>Across 129,770 requests, clarifying clauses that judges had disputed raised panel agreement on one benchmark by 0.069. But agreement with experts changed by -0.007, and two other benchmarks showed no qualifying improvement.</p><p>Check whether rubric edits improve both judge-to-judge consistency and agreement with human reviewers, not just the first measure. A panel that converges after an edit may be resolving ambiguity, or merely standardising the same mistaken interpretation.</p><p><a href=\"https://arxiv.org/abs/2610.13303\">Agreement Without Alignment: Label-Free Rubric Clarification Increases LLM-Judge Consensus but Not Agreement with Humans</a></p>",
+      "date_published": "2026-10-14T00:00:00+00:00",
+      "tags": [
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "judge-robustness",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2610.15938",
+      "url": "https://arxiv.org/abs/2610.15938",
+      "title": "Judges need the evidence behind the answer",
+      "content_html": "<p>A judge can sound certain while missing the one piece of evidence needed to spot a bad answer. That becomes dangerous when its critique is fed back into an agent that then revises its work.</p><p>When judges were shown the source material, their ability to separate supported from unsupported summaries rose from 0.565-0.587 to 0.775-0.795. In an instruction-following loop, feedback from a judge without the needed context cut constraint passing from 84% to 70%, while revising without feedback reached 87%.</p><p>The question is not only whether a judge agrees with human labels. What facts can it actually see, and does its feedback improve the final agent output rather than merely sound useful?</p><p><a href=\"https://arxiv.org/abs/2610.15938\">The Anatomy of a Blind Spot: What an LLM Judge Must Be Shown, and How Much</a></p>",
+      "date_published": "2026-10-14T00:00:00+00:00",
+      "tags": [
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "agent-evaluation",
+        "regression-gating"
+      ]
+    },
+    {
+      "id": "arxiv:2610.12083",
+      "url": "https://arxiv.org/abs/2610.12083",
+      "title": "Reliable Judge Scores Can Hide Fragile Verdicts",
+      "content_html": "<p>A judge can look steady in a dashboard while changing its mind when the same answer pair is shown in the opposite order. That can quietly select the wrong model, prompt, or release candidate.</p><p>Across repeated calls and presentation formats, judges changed verdicts on identical cases, and swapping answer order could reverse nearly every decision. In one JudgeBench setup, a judge reached 51% accuracy but only a 2% rate of verdicts that were both correct, repeatable, and unchanged by order.</p><p>A single accuracy score cannot tell whether your judge is measuring answer quality or reacting to how the comparison was framed. Are repeated calls and both answer orders part of the gate that approves changes?</p><p><a href=\"https://arxiv.org/abs/2610.12083\">All Verdicts are Not Equal: Rethinking LLM Judge Reliability</a></p>",
+      "date_published": "2026-10-14T00:00:00+00:00",
+      "tags": [
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "judge-robustness",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2610.12778",
+      "url": "https://arxiv.org/abs/2610.12778",
+      "title": "A Passing Judge May Be Reading Length",
+      "content_html": "<p>A review judge can appear to catch bad database specifications while really responding to a superficial cue. If pass and fail cases differ in length, a reassuring score may say little about whether the judge checked the source material.</p><p>On held-out Oracle migration records, a baseline that used specification length alone scored 0.88, and tests could not show that three leading judges beat it. The judges could still name the intended defect and point to relevant text when a record was deliberately broken, making their findings more useful than a bare pass or fail.</p><p>Before trusting a judge score, ask whether trivial cues such as length, formatting, or template wording can match it. Evidence-linked, typed findings are easier to review, but this controlled benchmark does not establish performance on live industrial migrations.</p><p><a href=\"https://arxiv.org/abs/2610.12778\">Leakage-Resistant Evaluation of AI-Generated Database Specifications in Specification-Driven Migration</a></p>",
+      "date_published": "2026-10-14T00:00:00+00:00",
+      "tags": [
+        "llm-as-a-judge",
+        "benchmarking",
+        "reproducibility",
+        "evaluation-metrics"
+      ]
+    },
+    {
       "id": "arxiv:2610.01833",
       "url": "https://arxiv.org/abs/2610.01833",
       "title": "Correct answers can still hide agent regressions",
@@ -680,110 +784,6 @@
         "reproducibility",
         "tool-use",
         "agent-evaluation"
-      ]
-    },
-    {
-      "id": "arxiv:2608.25920",
-      "url": "https://arxiv.org/abs/2608.25920",
-      "title": "Rerunning a failed agent often isn't testing your fix",
-      "content_html": "<p>You rerun a failed agent, it succeeds, and you credit the patch. But if the failure was flaky to begin with, you just got lucky again.</p><p>Testing 536 annotated failures across three multi-agent frameworks, researchers found unguided reruns only reproduce the original failure 67.97% of the time. Task-level fixes like retrying, self-reflection, or a critic agent resolved at most 6.90% of failures in three tries, while intervening directly at the failing step fixed 20.15% in one, nearly triple the best rerun-based approach.</p><p>The gap between those numbers means most &quot;fixed it&quot; claims from full reruns are partly measuring randomness, not the repair. Before trusting a repair method, ask whether your traces let you replay the exact failing state or whether you're just rolling the dice again.</p><p><a href=\"https://arxiv.org/abs/2608.25920\">Repair or Resample? Rethinking Failure Debugging in LLM Multi-Agent Systems</a></p>",
-      "date_published": "2026-08-27T00:00:00+00:00",
-      "tags": [
-        "multi-agent-systems",
-        "reproducibility",
-        "agent-tracing",
-        "agent-evaluation"
-      ]
-    },
-    {
-      "id": "arxiv:2608.21310",
-      "url": "https://arxiv.org/abs/2608.21310",
-      "title": "Right answer, wrong reasoning: agents that guess root causes",
-      "content_html": "<p>An agent that names the right root cause can still be making it up. If it never actually traces how the fault spread through your services, it just got lucky on the label you happened to check.</p><p>Researchers scored 3,500 diagnostic runs against hand-annotated fault paths in a microservice benchmark. The best setup picked the right service 90% of the time but only reconstructed the true fault-propagation chain 0.67 of the time, even on cases it got &quot;right,&quot; and a stronger model boosted accuracy by 10.8 points while leaving that chain-tracing score flat.</p><p>Failed runs still spotted most suspicious services, they just couldn't link them into a causal path, and burned far more reasoning rounds doing it. If you're grading root-cause agents on final-answer accuracy alone, you're likely rewarding guesses that happened to land.</p><p><a href=\"https://arxiv.org/abs/2608.21310\">Beyond Fault Localization: A Trajectory-Level Study of LLM Agents for Microservice Root Cause Analysis</a></p>",
-      "date_published": "2026-08-27T00:00:00+00:00",
-      "tags": [
-        "agent-trajectory",
-        "agent-evaluation",
-        "evaluation-metrics",
-        "observability"
-      ]
-    },
-    {
-      "id": "arxiv:2608.24691",
-      "url": "https://arxiv.org/abs/2608.24691",
-      "title": "Agents sound confident right when they are wrong",
-      "content_html": "<p>If your agent gates actions on its own stated confidence, you are trusting that confidence tracks correctness at the exact moment it acts. That is the part worth checking, not whether it sounds sure in general.</p><p>A hidden-information chess test isolated that moment directly: when the agent stated 50%+ confidence and then captured, it was right in 1 of 62 tries across two batches, and nearly all the miscalibration (99.3%) was concentrated in exactly those high-confidence moves. Most captures targeted squares it had never even named as candidates.</p><p>Legality, latency, cost and completion rate all looked fine and did not predict any of this, so outcome-only scoring would have ranked the worst belief-tracker first. The open question for your own stack: are you scoring what the model believes, or only whether the action happened to work?</p><p><a href=\"https://arxiv.org/abs/2608.24691\">Confident at the moment of action: belief miscalibration in LLM play under hidden information</a></p>",
-      "date_published": "2026-08-27T00:00:00+00:00",
-      "tags": [
-        "agent-evaluation",
-        "llm-judge-calibration",
-        "evaluation-metrics",
-        "guardrails"
-      ]
-    },
-    {
-      "id": "doi:10.18553/jmcp.2026.32.9.1076",
-      "url": "https://doi.org/10.18553/jmcp.2026.32.9.1076",
-      "title": "Your model refuses, but not when it's actually wrong",
-      "content_html": "<p>Agents that handle risky decisions often get judged on accuracy alone, with a &quot;when unsure it says so&quot; assumption baked in unexamined. That assumption is the part that quietly fails in production.</p><p>Testing five LLMs on 250 clinician-curated medication lists for drug interactions, accuracy ranged from 54.1% to 83.7%. A new Refusal Index, measuring whether a model's refusals actually track its error risk, came back only weakly to moderately calibrated (0.104 to 0.574), and prompts designed to encourage uncertainty acknowledgment didn't reliably fix this.</p><p>A model can be accurate and consistent while still refusing at the wrong moments. Before trusting a high-stakes agent's &quot;I'm not sure,&quot; check whether that phrase is measured separately from accuracy, or just assumed to come bundled with it.</p><p><a href=\"https://doi.org/10.18553/jmcp.2026.32.9.1076\">Navigating uncertainty matters: Evaluating large language models for drug-drug interaction identification</a></p>",
-      "date_published": "2026-08-27T00:00:00+00:00",
-      "tags": [
-        "llm-as-a-judge",
-        "evaluation-metrics",
-        "human-in-the-loop-calibration",
-        "safety"
-      ]
-    },
-    {
-      "id": "arxiv:2608.21057",
-      "url": "https://arxiv.org/abs/2608.21057",
-      "title": "Your LLM judge may not agree with your own experts",
-      "content_html": "<p>If you use an LLM to grade your agent's outputs, do you actually know it agrees with what your experts would say? A drug discovery team checked four candidate judges against five human raters on the same 35 outputs: one model reached a weighted Cohen's kappa of 0.76 against the human majority vote, another only 0.45, and adding 20 labeled examples lifted average alignment from 0.80 to 0.86.</p><p>Notably the humans themselves only reached moderate agreement (Fleiss kappa 0.54), so every judge was being tuned against a noisy target, and the gains rest on a small sample from one company's assistant.</p><p>Before trusting a judge's score, ask whether you ever measured it against disagreeing humans, or just assumed it was right.</p><p><a href=\"https://arxiv.org/abs/2608.21057\">Designing a Robust LLM-Based Evaluation System for Agentic AI in Drug Discovery Through Human Alignment</a></p>",
-      "date_published": "2026-08-27T00:00:00+00:00",
-      "tags": [
-        "llm-as-a-judge",
-        "human-in-the-loop-calibration",
-        "agent-evaluation",
-        "tool-use"
-      ]
-    },
-    {
-      "id": "arxiv:2608.22559",
-      "url": "https://arxiv.org/abs/2608.22559",
-      "title": "Turning rubric checks into code instead of judge calls",
-      "content_html": "<p>If you score agent outputs against a rubric with an LLM judge, every criterion gets re-judged every time, with the latency, cost, and inconsistency that implies.</p><p>A new approach compiles rubric criteria into small Python functions that compute satisfaction instead of asking a model. Across three long-form benchmarks the generated code matched or beat a judge model, reaching 92% preference accuracy on argument quality and 78% on helpfulness, with up to 320x lower latency, but only 53% on health criteria, barely above chance.</p><p>So the real question is which of your rubric items are &quot;argument structure&quot; style checks that code can nail deterministically, and which need actual reading. Treating the split as universal rather than checking it per-criterion is where this breaks.</p><p><a href=\"https://arxiv.org/abs/2608.22559\">ExecRubrics: Executable Tool-Augmented Rubrics for Verifiable and Efficient Long-Form Evaluation</a></p>",
-      "date_published": "2026-08-27T00:00:00+00:00",
-      "tags": [
-        "llm-as-a-judge",
-        "evaluation-metrics",
-        "cost-efficiency",
-        "benchmarking"
-      ]
-    },
-    {
-      "id": "doi:10.5445/ir/1000196452",
-      "url": "https://doi.org/10.5445/ir/1000196452",
-      "title": "RAG retrieval finds the right area, misses related pieces",
-      "content_html": "<p>If your RAG system pulls in an engineering model, database schema, or any richly connected structure, it may land near the right spot but quietly skip related elements the answer actually needs. That gap is easy to miss because it does not look like a wrong answer, just an incomplete one.</p><p>A study testing 13 embedding models, 7 formats, and 7 preprocessing strategies against real architecture models found that text embeddings reliably locate the right anchor point but often fail to retrieve everything connected to it. Embedding model choice mattered most, preprocessing second, and format a smaller, model-dependent factor, with compact key-value style formatting performing most robustly.</p><p>Standard retrieval benchmarks reward finding a relevant passage, not completeness across connected elements. Worth checking whether your own retrieval metric would even notice this failure.</p><p><a href=\"https://doi.org/10.5445/ir/1000196452\">Evaluating Embedding Models and Preprocessing for Retrieval of MDE Elements in RAG Systems</a></p>",
-      "date_published": "2026-08-27T00:00:00+00:00",
-      "tags": [
-        "rag-evaluation",
-        "evaluation-metrics",
-        "benchmarking",
-        "data-quality"
-      ]
-    },
-    {
-      "id": "doi:10.1007/s44163-026-02015-3",
-      "url": "https://doi.org/10.1007/s44163-026-02015-3",
-      "title": "Synthetic data can look fine yet make no sense",
-      "content_html": "<p>Synthetic records can pass every distribution check you run and still contradict themselves in ways no one is watching for, like a person flagged both never-married and husband. Your usual drift monitors track averages and correlations, so this kind of logical breakage slips through unnoticed.</p><p>A new scoring method built to catch exactly this, tested across three different generators trained on real census data, caught injected contradictions with an F1 between 0.86 and 0.95. Standard drift detection scored near zero on the same violations, and the check added about thirty milliseconds per thousand records.</p><p>If your pipeline only monitors aggregate statistics, ask whether anything is checking that individual records are internally coherent, not just statistically plausible on average.</p><p><a href=\"https://doi.org/10.1007/s44163-026-02015-3\">A semantic firewall for proactive governance of synthetic tabular data in generative AI pipelines</a></p>",
-      "date_published": "2026-08-27T00:00:00+00:00",
-      "tags": [
-        "data-quality",
-        "synthetic-data",
-        "evaluation-metrics",
-        "production-monitoring"
       ]
     }
   ]
