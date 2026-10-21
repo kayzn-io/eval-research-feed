@@ -1,9 +1,20 @@
 {
   "title": "kayzn.io AI Agent Evaluation Newsfeed",
-  "generated_at": "2026-10-14T11:06:40+00:00",
-  "issue_count": 9,
-  "entry_count": 76,
+  "generated_at": "2026-10-21T11:07:02+00:00",
+  "issue_count": 10,
+  "entry_count": 84,
   "issues": [
+    {
+      "date": "2026-10-21",
+      "range": "Oct 15-21, 2026",
+      "count": 8,
+      "headlines": [
+        "Strong safety scores can hide shortcut reliance",
+        "Fluent agents can still abandon the workflow",
+        "Your rubric may be driving judge failures"
+      ],
+      "path": "2026-10-21.json"
+    },
     {
       "date": "2026-10-14",
       "range": "Oct 8-14, 2026",

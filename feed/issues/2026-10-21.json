@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-21",
+  "range": "Oct 15-21, 2026",
+  "count": 8,
+  "entries": [
+    {
+      "id": "arxiv:2610.22243",
+      "headline": "Strong safety scores can hide shortcut reliance",
+      "paragraphs": [
+        "A guard can look reliable in a benchmark while reacting to labels, tool names or familiar task patterns instead of the risky action. That leaves a deployment exposed when a new domain, integration or wording removes those cues.",
+        "Across agent-safety test sets, a tool-lookup signal that worked in grouped test splits fell from .901 to .495 when entire domains were held out. In a fixed 64-step cohort, merely rewriting a marker changed one guard's blocking rate by -8.33 percentage points, while renaming tools changed it by +11.46 points.",
+        "A high score therefore does not establish that a guard is using the intended safety evidence. Do your evaluations hold out domains and test paired, harmless rewrites, or mainly reward recognition of benchmark-specific patterns?"
+      ],
+      "paper_title": "Shortcut Sensitivity in Agent-Safety Evaluations",
+      "paper_url": "https://arxiv.org/abs/2610.22243",
+      "paper_published": "2026-10-15",
+      "issue_date": "2026-10-21",
+      "issue_range": "Oct 15-21, 2026",
+      "themes": [
+        "agent-evaluation",
+        "evaluation",
+        "judge-robustness",
+        "safety"
+      ]
+    },
+    {
+      "id": "arxiv:2610.21561",
+      "headline": "Fluent agents can still abandon the workflow",
+      "paragraphs": [
+        "An agent can sound helpful, answer accurately, and still take a customer or operator down the wrong process. Those failures are easy to miss when reviews focus on whether each reply looks sensible in isolation.",
+        "A new test set of 36,278 dialogues across 24 tasks checks whether a conversation stays on its intended workflow, including cases where it first goes off track. Its FlowScore signal beat every comparison method across seven ways of reading the dialogue when identifying those deviations.",
+        "This does not establish that every workflow needs the same checks, or that a detected detour is always harmful. It does force a separate question: can your evaluation tell the difference between a fluent conversation and one that actually completed the right process?"
+      ],
+      "paper_title": "DialFork: Going Beyond Factuality to Evaluate Procedural Hallucination in Conversational Agents",
+      "paper_url": "https://arxiv.org/abs/2610.21561",
+      "paper_published": "2026-10-15",
+      "issue_date": "2026-10-21",
+      "issue_range": "Oct 15-21, 2026",
+      "themes": [
+        "agent-evaluation",
+        "benchmarking",
+        "agent-trajectory",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2610.24971",
+      "headline": "Your rubric may be driving judge failures",
+      "paragraphs": [
+        "A judge can look stable while the checklist beneath it quietly changes what counts as good. Self-review may make that worse when it rewrites the standard rather than checking the work.",
+        "Across synthetic tests and two editing and retrieval datasets, rubric changes moved correct-report pass rates from 97.2% to 5.6% after self-review. For all-must-pass checklists, the method assigns exact credit and blame to each check; a gate that tracked source evidence and those contributions kept 9 of 10 drifting chains within 5 points of their starting quality.",
+        "The key question is not only which judge model you run, but which checks set its standard and which of them catch real failures or reject valid work. Can a rubric edit pass release gates with separate rates for valid outputs accepted and flawed outputs caught?"
+      ],
+      "paper_title": "Rubrics Carry the Standard: Shapley Attribution for Checklist-Based LLM Judges",
+      "paper_url": "https://arxiv.org/abs/2610.24971",
+      "paper_published": "2026-10-18",
+      "issue_date": "2026-10-21",
+      "issue_range": "Oct 15-21, 2026",
+      "themes": [
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "evaluation-metrics",
+        "regression-gating"
+      ]
+    },
+    {
+      "id": "arxiv:2610.25852",
+      "headline": "Successful Agent Runs Can Still Hide Failures",
+      "paragraphs": [
+        "An agent run can look healthy because it reaches the right answer, even while handoffs, tool calls or checks go wrong along the way. Those hidden mistakes may be corrected today but become the weak link when the workflow changes.",
+        "Across 1,828 traces from nine multi-agent setups, 54.3% of runs marked successful still contained an implicit failure. Replaying a repair at the identified point raised recovery by up to 46.2 percentage points over doing nothing, and the failure signal selected repair points better than the tested step-scoring systems in every comparison.",
+        "Outcome accuracy alone cannot tell whether a workflow is robust or merely got lucky, and this does not show that every subtle issue can be found or repaired at once. Can your evaluation show which local errors were recovered, bypassed or carried forward, rather than treating a final success as a clean run?"
+      ],
+      "paper_title": "MASIF: Implicit Failures for Process Observability in Multi-Agent Systems",
+      "paper_url": "https://arxiv.org/abs/2610.25852",
+      "paper_published": "2026-10-19",
+      "issue_date": "2026-10-21",
+      "issue_range": "Oct 15-21, 2026",
+      "themes": [
+        "multi-agent-systems",
+        "agent-trajectory",
+        "observability",
+        "agent-evaluation"
+      ]
+    },
+    {
+      "id": "arxiv:2610.22511",
+      "headline": "Comparable agent results need complete evidence",
+      "paragraphs": [
+        "A run can look worse because its final answer was parsed differently, a tool call was hidden, or the serving setup changed. Teams often compare scores without knowing whether they are comparing the same evidence.",
+        "Across seven case studies, one unified record showed that answer extraction, serving behaviour, retrieval measurements and the shape of an agent\u2019s run can change what a result means. It also separated confirmed end results from clues about how the agent got there.",
+        "The practical question is whether each score carries its settings, metric direction and enough execution evidence to explain it. Missing records may limit diagnosis, but they do not by themselves prove the agent failed."
+      ],
+      "paper_title": "AuditKIT: A Unified Evaluation Spine for Benchmarking, Judging, and Comparing Large Language Models and Agentic Systems",
+      "paper_url": "https://arxiv.org/abs/2610.22511",
+      "paper_published": "2026-10-15",
+      "issue_date": "2026-10-21",
+      "issue_range": "Oct 15-21, 2026",
+      "themes": [
+        "agent-evaluation",
+        "evaluation-metrics",
+        "tool-use",
+        "reproducibility"
+      ]
+    },
+    {
+      "id": "arxiv:2610.25522",
+      "headline": "Warm advice can quietly lose the user\u2019s goal",
+      "paragraphs": [
+        "An assistant can sound caring, acknowledge the problem, and still fail to help the user do what they came to do. This is easy to miss when reviewers reward tone or an LLM judge treats a supportive reply as a good one.",
+        "Across advice scenarios scored by people, goal loss varied widely, including cases where empathy and practical direction had to coexist. In matched model checkpoints, mixed empathy-with-constraints failures were 52.3% after supervised fine-tuning, versus 13.8% after preference optimization.",
+        "A helpful tone is not proof that an agent kept the task intact. Are your evaluations checking whether the response still gives goal-relevant action, and can they separate needed emotional support from advice that sidesteps the request?"
+      ],
+      "paper_title": "When Empathy Misses the Goal: A Benchmark for Goal Displacement in LLM Advice",
+      "paper_url": "https://arxiv.org/abs/2610.25522",
+      "paper_published": "2026-10-18",
+      "issue_date": "2026-10-21",
+      "issue_range": "Oct 15-21, 2026",
+      "themes": [
+        "agent-evaluation",
+        "evaluation",
+        "human-in-the-loop",
+        "llm-judge-calibration"
+      ]
+    },
+    {
+      "id": "arxiv:2610.26464",
+      "headline": "Accepted proofs can still miss the requirement",
+      "paragraphs": [
+        "A code agent can return a verifier-approved proof while quietly proving the wrong thing. The risk is not just a bad implementation: a weak, empty, or altered contract can make an incorrect result look finished.",
+        "Across 13,716 generated Verus artifacts, only 42.3% of verifier-accepted results cleared checks for trivial proofs, input-output behaviour, and agreement with a reference contract. Many accepted artifacts failed concrete behaviour checks, and agreement with the reference was not assured even after those checks passed.",
+        "Verifier acceptance therefore answers whether code satisfies its stated contract, not whether that contract captures the requirement. Are generated contracts, concrete examples, and comparison rules being checked separately in your release gate, and who audits the reference contract itself?"
+      ],
+      "paper_title": "VerusEval: Evaluating LLM-Generated Verus Specifications Beyond Verifier Acceptance",
+      "paper_url": "https://arxiv.org/abs/2610.26464",
+      "paper_published": "2026-10-19",
+      "issue_date": "2026-10-21",
+      "issue_range": "Oct 15-21, 2026",
+      "themes": [
+        "agent-evaluation",
+        "evaluation",
+        "code-generation",
+        "benchmarking"
+      ]
+    },
+    {
+      "id": "arxiv:2610.21229",
+      "headline": "Cleanup rules can quietly discard valid training data",
+      "paragraphs": [
+        "Teams cleaning training data to keep benchmark answers out can end up removing useful examples instead. The risk is easy to miss when the report counts overlaps but does not show which removals were actually justified.",
+        "Across 16 math training collections, reviewers judged 52 of 59 sampled removals at a 0.80 meaning-match cutoff to be false. No tested cutoff met the study\u2019s 90% conservative accuracy target; an existing adjudicated rule did reach 98.1% resolved precision in its held-out candidate set.",
+        "That does not prove the rule catches every contaminated item, or eliminate mistaken removals across the full collection. If training data is filtered before agent tuning, can each removal policy be audited for both wrong deletions and what it fails to catch?"
+      ],
+      "paper_title": "What Should We Remove? Evaluating the Reliability and Costs of RLVR Data Decontamination",
+      "paper_url": "https://arxiv.org/abs/2610.21229",
+      "paper_published": "2026-10-15",
+      "issue_date": "2026-10-21",
+      "issue_range": "Oct 15-21, 2026",
+      "themes": [
+        "data-quality",
+        "evaluation",
+        "llm-as-a-judge",
+        "reproducibility"
+      ]
+    }
+  ]
+}
