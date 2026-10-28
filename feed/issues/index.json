@@ -1,9 +1,20 @@
 {
   "title": "kayzn.io AI Agent Evaluation Newsfeed",
-  "generated_at": "2026-10-21T11:07:02+00:00",
-  "issue_count": 10,
-  "entry_count": 84,
+  "generated_at": "2026-10-28T12:03:25+00:00",
+  "issue_count": 11,
+  "entry_count": 92,
   "issues": [
+    {
+      "date": "2026-10-28",
+      "range": "Oct 22-28, 2026",
+      "count": 8,
+      "headlines": [
+        "Shutdown behavior breaks across ordinary agent work",
+        "Successful agents can still make unauthorized changes",
+        "Knowing when search is actually worth it"
+      ],
+      "path": "2026-10-28.json"
+    },
     {
       "date": "2026-10-21",
       "range": "Oct 15-21, 2026",
