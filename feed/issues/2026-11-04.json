@@ -1,0 +1,167 @@
+{
+  "date": "2026-11-04",
+  "range": "Oct 29-Nov 4, 2026",
+  "count": 8,
+  "entries": [
+    {
+      "id": "arxiv:2610.40444",
+      "headline": "Final success can hide broken agent runs",
+      "paragraphs": [
+        "An agent can finish a task after an invalid tool call, a missing dependency, or an action taken before the system is ready. If the later steps repair the damage, a final-pass metric records a win while hiding where execution first broke.",
+        "Across 6,768 rollouts, rankings based on final outcomes differed from rankings that checked whether every tool-call prefix was valid. Methods using unverified plans could raise final success while producing fewer runs whose actions remained valid throughout.",
+        "The key distinction is an uninterrupted run versus a recovered outcome. Are you measuring where agents first make an unusable call, how long valid execution survives, and recovery separately, or treating all eventual completions as equally reliable?"
+      ],
+      "paper_title": "Prefix Executability: Evaluating Tool-Using Agents Beyond Final Success",
+      "paper_url": "https://arxiv.org/abs/2610.40444",
+      "paper_published": "2026-10-29",
+      "issue_date": "2026-11-04",
+      "issue_range": "Oct 29-Nov 4, 2026",
+      "themes": [
+        "agent-evaluation",
+        "tool-use",
+        "agent-trajectory",
+        "evaluation-metrics"
+      ]
+    },
+    {
+      "id": "arxiv:2611.02978",
+      "headline": "Final success can hide harmful tool calls",
+      "paragraphs": [
+        "An agent can leave the right final record while making extra calls that delete, overwrite, or repeat work along the way. If evaluation checks only the ending, those detours can look like success.",
+        "A replay of function-calling traces across 11 open models scored each call by its declared effect using fixed rules rather than another model. Its ordering closely matched BFCL's, but BFCL's leader lost 14.5 points when collateral destructive calls counted; extra steps consumed 2-28% of input tokens.",
+        "Effect labels alone did not change behavior in eight models. The operational question is whether your tests capture every write and destructive action, and distinguish a useful clarification from a request for real permission."
+      ],
+      "paper_title": "CAREFUL-Bench: Effect-Aware, Judge-Free Evaluation of Multi-Turn LLM Function Calling",
+      "paper_url": "https://arxiv.org/abs/2611.02978",
+      "paper_published": "2026-11-02",
+      "issue_date": "2026-11-04",
+      "issue_range": "Oct 29-Nov 4, 2026",
+      "themes": [
+        "agent-evaluation",
+        "tool-use",
+        "evaluation-metrics",
+        "judge-robustness"
+      ]
+    },
+    {
+      "id": "arxiv:2611.04399",
+      "headline": "Silent measurement errors can reshuffle agent rankings",
+      "paragraphs": [
+        "A leaderboard can move even when the agent has not. Missing grades, inflated costs, extra logged actions, or a changed evaluator can make one run look safer, cheaper, or more capable than the same behavior warrants.",
+        "In an audit of two public agent benchmarks, only 51% of one benchmark\u2019s Generalist episodes had been graded. Completing those grades raised its pooled accuracy from 0.30 to 0.43 and erased a published 13-point gap between scaffolds; other faults also altered costs, traces, and repeat grades.",
+        "A score alone is not evidence that runs were measured the same way. Can you inspect what fraction was graded, tie each action to the agent rather than the evaluator, verify costs from the root run, and compare results under the exact evaluator version?"
+      ],
+      "paper_title": "Silent Instrument Errors Reorder Agent Leaderboards",
+      "paper_url": "https://arxiv.org/abs/2611.04399",
+      "paper_published": "2026-11-03",
+      "issue_date": "2026-11-04",
+      "issue_range": "Oct 29-Nov 4, 2026",
+      "themes": [
+        "agent-evaluation",
+        "benchmarking",
+        "agent-tracing",
+        "reproducibility"
+      ]
+    },
+    {
+      "id": "arxiv:2610.41803",
+      "headline": "Strong detector scores can fail in production",
+      "paragraphs": [
+        "A trace detector can look reliable in testing yet flood operators with false alarms once real traffic contains far more normal runs than attacks. It may also be learning the quirks of familiar tools rather than signs that an agent has been hijacked.",
+        "At a 2% attack rate, one detector that scored well in standard testing produced precision of 0.076. Detectors trained on one agent benchmark were barely better than chance on another, showing that success on local test data did not carry over.",
+        "Ask whether your detector is tested at your expected attack rate, against the normal traces it will actually see, and on tools it was not trained around. A good ranking score alone does not establish that an alert threshold will be useful in production."
+      ],
+      "paper_title": "What Standard Evaluations Hide About Detectors of Hijacked LLM Agents: Rare Attacks, Unseen Tools and Benchmark Transfer",
+      "paper_url": "https://arxiv.org/abs/2610.41803",
+      "paper_published": "2026-10-30",
+      "issue_date": "2026-11-04",
+      "issue_range": "Oct 29-Nov 4, 2026",
+      "themes": [
+        "agent-evaluation",
+        "benchmarking",
+        "agent-tracing",
+        "production-monitoring"
+      ]
+    },
+    {
+      "id": "arxiv:2611.02676",
+      "headline": "Passing checks can hide missing judge evidence",
+      "paragraphs": [
+        "A judge can return a confident verdict even when the record it sees is missing the very actions it is meant to assess. If rendered traces drop tool calls or other structured events, passing checks and matching files may only prove that a broken handoff was consistent.",
+        "In one 30-trajectory evaluation pipeline, every structured tool call was omitted from the rendered record, leaving 53 of 60 judged steps blank. Restoring those calls sharply reduced a judge's tendency to flag errors based on what appeared later in the trace; separate controls caught 18 of 19 deliberately planted faults before a judge read the record.",
+        "The question is not only whether your judge agrees with a checker, but whether it received every field the rubric requires. Can the pipeline independently prove the rendered packet is complete, block incomplete packets, and test that protection when components change?"
+      ],
+      "paper_title": "Does the Judge See What the Evaluation Requires? Input Assurance for LLM Agent Evaluation",
+      "paper_url": "https://arxiv.org/abs/2611.02676",
+      "paper_published": "2026-11-02",
+      "issue_date": "2026-11-04",
+      "issue_range": "Oct 29-Nov 4, 2026",
+      "themes": [
+        "llm-as-a-judge",
+        "agent-evaluation",
+        "judge-robustness",
+        "reproducibility"
+      ]
+    },
+    {
+      "id": "arxiv:2610.40966",
+      "headline": "Stronger retrieval can make abstention look worse",
+      "paragraphs": [
+        "An abstention test can mark a request unanswerable simply because the expected document was not retrieved, even when other retrieved material supports a correct answer. That can make a stronger retriever look worse at knowing when to answer.",
+        "Across four conversational retrieval systems, the share of \u201cmissing expected document\u201d cases that were truly unsupported fell from .68 to .10 as retrieval improved. In other words, many apparent failures were labels that no longer matched the evidence the system had found.",
+        "If labels come from expected-document presence, are they measuring whether your agent lacked support, or whether it found a different useful source? Check labels against the retrieved text for each retriever before ranking abstention methods; this does not establish which detector is best after that check."
+      ],
+      "paper_title": "Better Retrievers, Worse Labels: How Incomplete Relevance Judgments Distort Abstention Evaluation in Conversational RAG",
+      "paper_url": "https://arxiv.org/abs/2610.40966",
+      "paper_published": "2026-10-29",
+      "issue_date": "2026-11-04",
+      "issue_range": "Oct 29-Nov 4, 2026",
+      "themes": [
+        "rag-evaluation",
+        "evaluation",
+        "llm-as-a-judge",
+        "reproducibility"
+      ]
+    },
+    {
+      "id": "arxiv:2611.04091",
+      "headline": "Rubric wording can change an LLM judge",
+      "paragraphs": [
+        "A judge can appear reliable until a rule is rewritten without changing what it asks. In multilingual support evaluation, a negation, condition, or exception may turn the same acceptance rule into a different verdict.",
+        "Across 51,744 judgments of Korean support dialogues, rules with those clause forms were 5.6 times more likely to produce disagreement between providers. Meaning-equivalent wording also changed an individual model's verdict in 11-15% of cases, and agreement was lower for Korean rubrics than English ones.",
+        "That makes rubric phrasing part of the system being evaluated, not just documentation. Test equivalent wordings and each language you deploy; this result does not establish which verdict was correct, because there were no human labels and the materials were model-drafted."
+      ],
+      "paper_title": "Same Rule, Different Verdicts: Rubric Language and Clause Structure in LLM Judges for Korean Support Dialogues",
+      "paper_url": "https://arxiv.org/abs/2611.04091",
+      "paper_published": "2026-11-03",
+      "issue_date": "2026-11-04",
+      "issue_range": "Oct 29-Nov 4, 2026",
+      "themes": [
+        "llm-as-a-judge",
+        "llm-judge-calibration",
+        "judge-robustness",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "arxiv:2611.03377",
+      "headline": "Benchmark scores can change without model changes",
+      "paragraphs": [
+        "A model can give the same answers while its reported benchmark result changes because the grader handles messy outputs differently. That risk is easy to miss when comparisons focus on a single final percentage.",
+        "Across five open vision-language models, changing only one benchmark's parse-failure rule moved accuracy by up to 22 percentage points over 1,670 questions. Even a reasoning model that never failed to comply moved 9.5 points when a regex tie-break changed.",
+        "This does not show that every benchmark result is unreliable, and the strongest human checks covered only two benchmarks. But when a model comparison informs a release decision, do you know which outputs the grader rejected, how it broke ties, and how much the ranking changes under reasonable alternatives?"
+      ],
+      "paper_title": "Same Outputs, Different Scores: Auditing the Unchecked Graders of Multimodal LLM Benchmarks",
+      "paper_url": "https://arxiv.org/abs/2611.03377",
+      "paper_published": "2026-11-02",
+      "issue_date": "2026-11-04",
+      "issue_range": "Oct 29-Nov 4, 2026",
+      "themes": [
+        "benchmarking",
+        "evaluation",
+        "llm-as-a-judge",
+        "judge-robustness"
+      ]
+    }
+  ]
+}

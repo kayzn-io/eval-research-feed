@@ -1,9 +1,20 @@
 {
   "title": "kayzn.io AI Agent Evaluation Newsfeed",
-  "generated_at": "2026-10-28T12:03:25+00:00",
-  "issue_count": 11,
-  "entry_count": 92,
+  "generated_at": "2026-11-04T13:44:45+00:00",
+  "issue_count": 12,
+  "entry_count": 100,
   "issues": [
+    {
+      "date": "2026-11-04",
+      "range": "Oct 29-Nov 4, 2026",
+      "count": 8,
+      "headlines": [
+        "Final success can hide broken agent runs",
+        "Final success can hide harmful tool calls",
+        "Silent measurement errors can reshuffle agent rankings"
+      ],
+      "path": "2026-11-04.json"
+    },
     {
       "date": "2026-10-28",
       "range": "Oct 22-28, 2026",
