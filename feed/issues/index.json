@@ -1,9 +1,20 @@
 {
   "title": "kayzn.io AI Agent Evaluation Newsfeed",
-  "generated_at": "2026-11-04T13:44:45+00:00",
-  "issue_count": 12,
-  "entry_count": 100,
+  "generated_at": "2026-11-11T13:30:10+00:00",
+  "issue_count": 13,
+  "entry_count": 108,
   "issues": [
+    {
+      "date": "2026-11-11",
+      "range": "Nov 5-11, 2026",
+      "count": 8,
+      "headlines": [
+        "Agent leaderboards can outlive their useful rankings",
+        "A strong checker can still judge wrongly",
+        "Capable agents may cross permission boundaries"
+      ],
+      "path": "2026-11-11.json"
+    },
     {
       "date": "2026-11-04",
       "range": "Oct 29-Nov 4, 2026",
